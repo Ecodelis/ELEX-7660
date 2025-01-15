@@ -1,0 +1,3 @@
+module bcitid (input logic x, output logic y);
+
+endmodule

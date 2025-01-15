@@ -1,0 +1,59 @@
+{C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2.sv} {1 {vlog -work work -sv -stats=none {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decode2
+
+Top level modules:
+	decode2
+
+} {} {}} {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv} {2 {vlog -work work -sv -stats=none {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decode7
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(6): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(7): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(8): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(9): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(11): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(12): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(13): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(16): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(17): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(18): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(19): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(23): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv(24): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	decode7
+
+} {} {}} {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decode2_tb
+
+Top level modules:
+	decode2_tb
+
+} {} {}} {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid.sv} {1 {vlog -work work -sv -stats=none {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bcitid
+
+Top level modules:
+	bcitid
+
+} {} {}} {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bcitid_tb
+
+Top level modules:
+	bcitid_tb
+
+} {} {}} {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decode7_tb
+
+Top level modules:
+	decode7_tb
+
+} {} {}}

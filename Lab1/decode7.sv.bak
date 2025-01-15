@@ -1,0 +1,9 @@
+module decode7 (input logic num,
+						output logic leds);
+						
+						
+
+						
+						
+						
+endmodule

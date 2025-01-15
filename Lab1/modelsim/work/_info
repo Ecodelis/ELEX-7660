@@ -1,0 +1,154 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Software/Quartus_18-1
+vbcitid
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1736882878
+!i10b 1
+!s100 GEMZ5DGB`TF[5ZQP`>7[@1
+ImgOg]4zoe?abA`H[M2BT23
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 bcitid_sv_unit
+S1
+Z3 dC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/modelsim
+w1736881249
+8C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid.sv
+FC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1736882877.000000
+!s107 C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vbcitid_tb
+R0
+R1
+!i10b 1
+!s100 M4;8zWKRUjmf?Q0k]k07z1
+IAX__DOn0ffBIXNR@8UWZ62
+R2
+!s105 bcitid_tb_sv_unit
+S1
+R3
+Z8 w1736739645
+8C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid_tb.sv
+FC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid_tb.sv
+L0 4
+R4
+r1
+!s85 0
+31
+Z9 !s108 1736882878.000000
+!s107 C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/bcitid_tb.sv|
+!i113 1
+R6
+R7
+vdecode2
+R0
+R1
+!i10b 1
+!s100 >zI[Sj>1P4Pe;`z28UUa23
+I9d3_I5e[?gV=c4K[=RA<C1
+R2
+!s105 decode2_sv_unit
+S1
+R3
+w1736742219
+8C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2.sv
+FC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2.sv|
+!i113 1
+R6
+R7
+vdecode2_tb
+R0
+R1
+!i10b 1
+!s100 A;F[ab`>@D^]:Ybo1VA<^0
+I5m>:H7T<z>QR`L4gJO9AQ0
+R2
+!s105 decode2_tb_sv_unit
+S1
+R3
+R8
+8C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2_tb.sv
+FC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2_tb.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode2_tb.sv|
+!i113 1
+R6
+R7
+vdecode7
+R0
+R1
+!i10b 1
+!s100 H65_B@8UE>dLQRjlVISe42
+I70KUV69c182;<V`S00UaB3
+R2
+!s105 decode7_sv_unit
+S1
+R3
+w1736882869
+8C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv
+FC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7.sv|
+!i113 1
+R6
+R7
+vdecode7_tb
+R0
+!s110 1736882877
+!i10b 1
+!s100 lcJ<51i1GJ;iWz8Nf9LA20
+IRVHW<X=Yaz;3So4lkz?900
+R2
+!s105 decode7_tb_sv_unit
+S1
+R3
+R8
+8C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7_tb.sv
+FC:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7_tb.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Software/xxoruan/Xournal++/xournal notes/Beng Term 4/ELEX 7660/labs/lab1/decode7_tb.sv|
+!i113 1
+R6
+R7
