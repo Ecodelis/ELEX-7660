@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2
-Mon Jan 27 20:58:06 2025
+Tue Jan 28 10:51:22 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,13 +14,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Source assignments for Top-level Entity: |lab2
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for Top-level Entity: |lab2
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,7 +47,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jan 27 20:58:06 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jan 28 10:51:22 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab2                                        ;
 ; Top-level Entity Name           ; lab2                                        ;
@@ -243,6 +244,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                      ;
++-----------------------------+---------------------------+----------------------------------------+
+; Register name               ; Reason for Removal        ; Registers Removed due to This Register ;
++-----------------------------+---------------------------+----------------------------------------+
+; enc2bcd:enc2bcd_2|ccw_pulse ; Stuck at GND              ; enc2bcd:enc2bcd_2|ccw_pulse_count[2]   ;
+;                             ; due to stuck port data_in ;                                        ;
+; enc2bcd:enc2bcd_2|cw_pulse  ; Stuck at GND              ; enc2bcd:enc2bcd_2|cw_pulse_count[2]    ;
+;                             ; due to stuck port data_in ;                                        ;
+; enc2bcd:enc2bcd_1|ccw_pulse ; Stuck at GND              ; enc2bcd:enc2bcd_1|ccw_pulse_count[2]   ;
+;                             ; due to stuck port data_in ;                                        ;
+; enc2bcd:enc2bcd_1|cw_pulse  ; Stuck at GND              ; enc2bcd:enc2bcd_1|cw_pulse_count[2]    ;
+;                             ; due to stuck port data_in ;                                        ;
++-----------------------------+---------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -258,17 +275,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_1|bcd_count[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_2|bcd_count[3] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|Mux1                           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|enc2bcd:enc2bcd_1|bcd_count    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|enc2bcd:enc2bcd_2|bcd_count    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_1|bcd_count[0]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_2|bcd_count[3]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_1|cw_pulse_count[0]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_1|ccw_pulse_count[2] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_2|cw_pulse_count[0]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab2|enc2bcd:enc2bcd_2|ccw_pulse_count[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|Mux2                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|enc2bcd:enc2bcd_1|bcd_count          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|enc2bcd:enc2bcd_2|bcd_count          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +------------------------------------------------+
@@ -324,7 +345,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Jan 27 20:57:44 2025
+    Info: Processing started: Tue Jan 28 10:51:01 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -345,8 +366,8 @@ Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" Fil
 Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv Line: 25
 Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_1" File: C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv Line: 27
 Info (12128): Elaborating entity "enc2bcd" for hierarchy "enc2bcd:enc2bcd_1" File: C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at enc2bcd.sv(28): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab2/enc2bcd.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at enc2bcd.sv(62): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab2/enc2bcd.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at enc2bcd.sv(18): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab2/enc2bcd.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at enc2bcd.sv(51): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab2/enc2bcd.sv Line: 51
 Info (13014): Ignored 4 buffer(s)
     Info (13019): Ignored 4 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
@@ -361,9 +382,9 @@ Info (21057): Implemented 114 device resources after synthesis - the final resou
     Info (21061): Implemented 97 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Mon Jan 27 20:58:06 2025
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Tue Jan 28 10:51:22 2025
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

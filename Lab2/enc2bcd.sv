@@ -1,5 +1,6 @@
 // File: enc2bcd.sv
-// Description: Counts up or down every 4 pulses of CW or CCW. Converts binary to decimal.
+// Description: Counts up or down every 4 pulses of CW or CCW. Also limits count
+//              from 00 to 99 in decimal
 // Author: Marcus Fu
 // Date: 2024-01-18
 
@@ -13,8 +14,8 @@ module enc2bcd (input logic clk, cw, ccw, output logic [7:0] bcd_count) ;
 
     always_ff @(posedge clk) begin
 
-        if (cw) begin
-            if (cw_pulse_count < 3) begin
+        if (cw) begin // If detected
+            if (cw_pulse_count <= 3) begin
                 cw_pulse_count = cw_pulse_count + 1;
             end else begin
                 cw_pulse_count = 0;
@@ -47,7 +48,7 @@ module enc2bcd (input logic clk, cw, ccw, output logic [7:0] bcd_count) ;
 
         // FOR COUNTING DOWN
         if (ccw) begin
-            if (ccw_pulse_count < 3) begin
+            if (ccw_pulse_count <= 3) begin
                 ccw_pulse_count = ccw_pulse_count + 1;
             end else begin
                 ccw_pulse_count = 0;

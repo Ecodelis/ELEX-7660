@@ -30,7 +30,7 @@ module encoder	( input logic clk,      // clock signal
             ccw = 1'b0;
         end
 
-        {a_prev, b_prev} <= {a, b};
+        {a_prev, b_prev} <= {a, b}; // store current values as previous values
     end
 
 
