@@ -30,17 +30,6 @@ module lab2 ( input logic CLOCK_50,       // 50 MHz clock
    enc2bcd enc2bcd_1 (.clk(CLOCK_50), .cw(enc1_cw), .ccw(enc1_ccw), .bcd_count(enc1_count));
    enc2bcd enc2bcd_2 (.clk(CLOCK_50), .cw(enc2_cw), .ccw(enc2_ccw), .bcd_count(enc2_count));
 
-
-// // encoder counts: enc1_count & enc2_count (increment when cw=1, decrement when ccw=1)
-// always_ff @(posedge CLOCK_50) begin
-// // encoder 1 count
-//   if (enc1_cw) enc1_count <= enc1_count + 1'b1;
-//   else if (enc1_ccw) enc1_count <= enc1_count - 1'b1;
-//   //encoder 2 count
-//   if (enc2_cw) enc2_count <= enc2_count + 1'b1;
-//   else if (enc2_ccw) enc2_count <= enc2_count - 1'b1;
-// end
-
    // use count to divide clock and generate a 2 bit digit counter to determine which digit to display
    always_ff @(posedge CLOCK_50) 
      clk_div_count <= clk_div_count + 1'b1 ;

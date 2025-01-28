@@ -26,6 +26,7 @@ module enc2bcd (input logic clk, cw, ccw, output logic [7:0] bcd_count) ;
         if (cw_pulse) begin
             cw_pulse = 0;
             cw_pulse_count = 0; // Reset count for next pulse (avoids multiple pulses)
+            
 
             if (bcd_count < 8'b1001_1001) begin // less than 99
 
