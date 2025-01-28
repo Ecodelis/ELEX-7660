@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at encoder.sv(20): always construct contains both blocking and non-blocking assignments File: C:/SHAMM/github repos/ELEX-7660/Lab2/encoder.sv Line: 20

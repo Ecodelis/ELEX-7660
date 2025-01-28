@@ -1,0 +1,43 @@
+// File: enc2bcd.sv
+// Description: Counts up or down every 4 pulses of CW or CCW. Converts binary to decimal.
+// Author: Marcus Fu
+// Date: 2024-01-18
+
+module enc2bcd (input logic clk, cw, ccw, output logic [7:0] bcd_count) ;
+
+    logic [2:0] cw_pulse_count = 3'b000; // Counts the number of CW pulses
+    logic [2:0] ccw_pulse_count = 3'b000; // Counts the number of CCW pulses
+
+    always_ff @(posedge clk) begin
+
+        // FOR COUNTING UP
+        if (cw == 1'b1 && cw_pulse_count <= 3'b0111) begin // Every 4 pulses increase ones
+            cw_pulse_count = cw_pulse_count + 1;
+
+        end else if (bc_count[3:0] < 4'b1001) begin // if count < 9, do the following:
+            cw_pulse_count = 3'b000; // reset ones back to 0
+            bcd_count = bcd_count[3:0] + 1; // increase tens
+
+        end else if bcd_count[7:0] < 8'b1001_1001 begin // stop counting up when 99
+            bcd_count = bcd_count[7:4] + 1; // tens digit goes up
+        end else begin
+            bcd_count = bcd_count; // stay at 99
+        end
+   
+
+        // FOR COUNTING DOWN
+        if (ccw == 1'b1 && ccw_pulse_count <= 3'b0111) begin // Every 4 pulses increase ones
+            ccw_pulse_count = ccw_pulse_count + 1;
+
+        end else if (bc_count[3:0] > 4'b0000) begin // if count > 0, do the following:
+            ccw_pulse_count = 3'b000; // reset ones back to 0
+            bcd_count = bcd_count[3:0] - 1; // increase tens
+
+        end else if bcd_count[7:0] > 8'b0000_0000 begin // stop counting down when 00
+            bcd_count = bcd_count[7:4] - 1; // tens digit goes up
+        end else begin
+            bcd_count = bcd_count; // stay at 00
+        end        
+    end
+
+endmodule

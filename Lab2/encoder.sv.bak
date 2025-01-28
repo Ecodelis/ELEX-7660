@@ -1,0 +1,6 @@
+// File: encoder.sv
+// Description: ???
+// Author: Marcus Fu
+// Date: 2024-01-18
+
+module encoder	( in

@@ -1,0 +1,144 @@
+|lab2
+CLOCK_50 => CLOCK_50.IN4
+enc1_a => comb.DATAIN
+enc1_b => comb.DATAIN
+enc2_a => comb.DATAIN
+enc2_b => comb.DATAIN
+leds[0] << decode7:decode7_0.leds[0]
+leds[1] << decode7:decode7_0.leds[1]
+leds[2] << decode7:decode7_0.leds[2]
+leds[3] << decode7:decode7_0.leds[3]
+leds[4] << decode7:decode7_0.leds[4]
+leds[5] << decode7:decode7_0.leds[5]
+leds[6] << decode7:decode7_0.leds[6]
+leds[7] << decode7:decode7_0.leds[7]
+ct[0] << decode2:decode2_0.ct[0]
+ct[1] << decode2:decode2_0.ct[1]
+ct[2] << decode2:decode2_0.ct[2]
+ct[3] << decode2:decode2_0.ct[3]
+
+
+|lab2|decode2:decode2_0
+digit[0] => Decoder0.IN1
+digit[1] => Decoder0.IN0
+ct[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ct[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ct[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ct[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|decode7:decode7_0
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+leds[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= <GND>
+
+
+|lab2|encoder:encoder_1
+clk => b_prev.CLK
+clk => a_prev.CLK
+clk => ccw~reg0.CLK
+clk => cw~reg0.CLK
+a => always0.IN1
+a => always0.IN1
+a => a_prev.DATAIN
+b => always0.IN1
+b => always0.IN1
+b => b_prev.DATAIN
+cw <= cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ccw <= ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|encoder:encoder_2
+clk => b_prev.CLK
+clk => a_prev.CLK
+clk => ccw~reg0.CLK
+clk => cw~reg0.CLK
+a => always0.IN1
+a => always0.IN1
+a => a_prev.DATAIN
+b => always0.IN1
+b => always0.IN1
+b => b_prev.DATAIN
+cw <= cw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ccw <= ccw~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|enc2bcd:enc2bcd_1
+clk => ccw_pulse.CLK
+clk => ccw_pulse_count[0].CLK
+clk => ccw_pulse_count[1].CLK
+clk => ccw_pulse_count[2].CLK
+clk => bcd_count[0]~reg0.CLK
+clk => bcd_count[1]~reg0.CLK
+clk => bcd_count[2]~reg0.CLK
+clk => bcd_count[3]~reg0.CLK
+clk => bcd_count[4]~reg0.CLK
+clk => bcd_count[5]~reg0.CLK
+clk => bcd_count[6]~reg0.CLK
+clk => bcd_count[7]~reg0.CLK
+clk => cw_pulse.CLK
+clk => cw_pulse_count[0].CLK
+clk => cw_pulse_count[1].CLK
+clk => cw_pulse_count[2].CLK
+cw => cw_pulse.OUTPUTSELECT
+cw => cw_pulse_count[0].ENA
+cw => cw_pulse_count[1].ENA
+cw => cw_pulse_count[2].ENA
+ccw => ccw_pulse.OUTPUTSELECT
+ccw => ccw_pulse_count[1].ENA
+ccw => ccw_pulse_count[0].ENA
+ccw => ccw_pulse_count[2].ENA
+bcd_count[0] <= bcd_count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[1] <= bcd_count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[2] <= bcd_count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[3] <= bcd_count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[4] <= bcd_count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[5] <= bcd_count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[6] <= bcd_count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[7] <= bcd_count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|enc2bcd:enc2bcd_2
+clk => ccw_pulse.CLK
+clk => ccw_pulse_count[0].CLK
+clk => ccw_pulse_count[1].CLK
+clk => ccw_pulse_count[2].CLK
+clk => bcd_count[0]~reg0.CLK
+clk => bcd_count[1]~reg0.CLK
+clk => bcd_count[2]~reg0.CLK
+clk => bcd_count[3]~reg0.CLK
+clk => bcd_count[4]~reg0.CLK
+clk => bcd_count[5]~reg0.CLK
+clk => bcd_count[6]~reg0.CLK
+clk => bcd_count[7]~reg0.CLK
+clk => cw_pulse.CLK
+clk => cw_pulse_count[0].CLK
+clk => cw_pulse_count[1].CLK
+clk => cw_pulse_count[2].CLK
+cw => cw_pulse.OUTPUTSELECT
+cw => cw_pulse_count[0].ENA
+cw => cw_pulse_count[1].ENA
+cw => cw_pulse_count[2].ENA
+ccw => ccw_pulse.OUTPUTSELECT
+ccw => ccw_pulse_count[1].ENA
+ccw => ccw_pulse_count[0].ENA
+ccw => ccw_pulse_count[2].ENA
+bcd_count[0] <= bcd_count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[1] <= bcd_count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[2] <= bcd_count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[3] <= bcd_count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[4] <= bcd_count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[5] <= bcd_count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[6] <= bcd_count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_count[7] <= bcd_count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

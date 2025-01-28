@@ -1,0 +1,153 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Software/Quartus_18-1
+vdecode2
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1737505882
+!i10b 1
+!s100 NKYkn0]H=>[i;:PbFbP0j2
+INbO9B^<3^8nLg:T4O<5eH3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 decode2_sv_unit
+S1
+Z3 dC:/SHAMM/github repos/ELEX-7660/Lab2/ModelSim
+w1737241257
+8C:/SHAMM/github repos/ELEX-7660/Lab2/decode2.sv
+FC:/SHAMM/github repos/ELEX-7660/Lab2/decode2.sv
+L0 8
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1737505882.000000
+!s107 C:/SHAMM/github repos/ELEX-7660/Lab2/decode2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab2/decode2.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vdecode7
+R0
+R1
+!i10b 1
+!s100 13CekcdDN9mW@m[zQL^c03
+I?=_Okz^OV=;Y<@H=bVe=j0
+R2
+!s105 decode7_sv_unit
+S1
+R3
+w1737241264
+8C:/SHAMM/github repos/ELEX-7660/Lab2/decode7.sv
+FC:/SHAMM/github repos/ELEX-7660/Lab2/decode7.sv
+L0 7
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/SHAMM/github repos/ELEX-7660/Lab2/decode7.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab2/decode7.sv|
+!i113 1
+R6
+R7
+vencoder
+R0
+R1
+!i10b 1
+!s100 1G:SCYXdf;mkB3JlF`EMc1
+IFWL0gdWFXNNN<z8RFHPOM3
+R2
+!s105 encoder_sv_unit
+S1
+R3
+w1737505873
+8C:/SHAMM/github repos/ELEX-7660/Lab2/encoder.sv
+FC:/SHAMM/github repos/ELEX-7660/Lab2/encoder.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/SHAMM/github repos/ELEX-7660/Lab2/encoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab2/encoder.sv|
+!i113 1
+R6
+R7
+vencoder_tb
+R0
+DXx4 work 18 encoder_tb_sv_unit 0 22 IiCz@mlm]<6JKza[SggIS2
+R2
+r1
+!s85 0
+31
+!i10b 1
+!s100 XH5E_@fHI0hnVmgQ[9lJ`3
+IG]N4_aT=keM[d@iB]8kMJ2
+!s105 encoder_tb_sv_unit
+S1
+R3
+Z8 w1737242377
+Z9 8C:/SHAMM/github repos/ELEX-7660/Lab2/encoder_tb.sv
+Z10 FC:/SHAMM/github repos/ELEX-7660/Lab2/encoder_tb.sv
+L0 20
+R4
+R5
+Z11 !s107 C:/SHAMM/github repos/ELEX-7660/Lab2/encoder_tb.sv|
+Z12 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab2/encoder_tb.sv|
+!i113 1
+R6
+R7
+Xencoder_tb_sv_unit
+R0
+VIiCz@mlm]<6JKza[SggIS2
+r1
+!s85 0
+31
+!i10b 1
+!s100 gYc>1KmbbImBFf?0ZJmcJ2
+IIiCz@mlm]<6JKza[SggIS2
+!i103 1
+S1
+R3
+R8
+R9
+R10
+L0 10
+R4
+R5
+R11
+R12
+!i113 1
+R6
+R7
+vlab2
+R0
+R1
+!i10b 1
+!s100 ikJMCgdoIa^iWD_jVKPWn0
+I7h<MR^6d@jF7_dHBHblJ=0
+R2
+!s105 lab2_sv_unit
+S1
+R3
+w1737500814
+8C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv
+FC:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv|
+!i113 1
+R6
+R7

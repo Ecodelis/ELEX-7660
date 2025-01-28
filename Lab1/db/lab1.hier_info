@@ -43,13 +43,13 @@ num[0] => Decoder0.IN3
 num[1] => Decoder0.IN2
 num[2] => Decoder0.IN1
 num[3] => Decoder0.IN0
-leds[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-leds[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-leds[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-leds[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-leds[4] <= <GND>
-leds[5] <= <GND>
-leds[6] <= <GND>
+leds[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 leds[7] <= <GND>
 
 
