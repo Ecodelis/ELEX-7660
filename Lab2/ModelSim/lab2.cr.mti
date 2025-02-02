@@ -5,13 +5,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	encoder
 
-} {} {}} {C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module lab2
-
-Top level modules:
-	lab2
-
 } {} {}} {C:/SHAMM/github repos/ELEX-7660/Lab2/encoder_tb.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Lab2/encoder_tb.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling package encoder_tb_sv_unit
@@ -19,6 +12,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	encoder_tb
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Lab2/lab2.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lab2
+
+Top level modules:
+	lab2
 
 } {} {}} {C:/SHAMM/github repos/ELEX-7660/Lab2/decode2.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Lab2/decode2.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
