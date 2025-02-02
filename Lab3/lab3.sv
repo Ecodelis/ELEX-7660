@@ -29,20 +29,17 @@ module lab3 ( input logic CLOCK_50,       // 50 MHz clock
 	decode2 decode2_0 (.digit(digit), .ct(ct));
    decode7 decode7_0 (.num(disp_digit), .leds(leds));
 
-   encoder encoder_1 (.clk(CLOCK_50), .a(enc1_a), .b(enc1_b), .cw(enc1_cw), .ccw(enc1_ccw));
-   //encoder encoder_2 (.clk(CLOCK_50), .a(enc2_a), .b(enc2_b), .cw(enc2_cw), .ccw(enc2_ccw));
+   encoder encoder_2 (.clk(CLOCK_50), .a(enc2_a), .b(enc2_b), .cw(enc2_cw), .ccw(enc2_ccw));
 
    tonegen #(.FCLK(50000000)) tonegen_1 (.clk(CLOCK_50), .reset_n(reset_n), .freq(tone_freq), .onOff(onOff), .spkr(spkr));
 
-   enc2freq enc2freq_1 (.clk(CLOCK_50), .cw(enc1_cw), .ccw(enc1_ccw), .freq(tone_freq), .reset_n(reset_n));
+   enc2freq enc2freq_2 (.clk(CLOCK_50), .cw(enc2_cw), .ccw(enc2_ccw), .freq(tone_freq), .reset_n(reset_n));
 
-   //enc2bcd enc2bcd_1 (.clk(CLOCK_50), .cw(enc1_cw), .ccw(enc1_ccw), .bcd_count(enc1_count));
-
-   // use count to divide clock and generate a 2 bit digit counter to determine which digit to display
+   // reset and onOff signals
    always_ff @(posedge CLOCK_50) begin
 		clk_div_count <= clk_div_count + 1'b1 ;
 	  
-
+    // Pushbuttons are active low
 		 if (s1) begin
 			reset_n <= 1;
 		 end else begin
