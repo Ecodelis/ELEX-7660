@@ -19,6 +19,7 @@ module encoder	( input logic clk,      // clock signal
 
     always_ff @(posedge clk) begin
 
+// a != prev_b
         if ((a != a_prev && b == a_prev) || (b != b_prev && b == a_prev)) begin // When going CW
             cw = 1'b1;
             ccw = 1'b0;
