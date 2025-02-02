@@ -1,5 +1,5 @@
 |lab3
-CLOCK_50 => CLOCK_50.IN2
+CLOCK_50 => CLOCK_50.IN1
 enc1_a => comb.DATAIN
 enc1_b => comb.DATAIN
 enc2_a => ~NO_FANOUT~
@@ -348,36 +348,5 @@ clk => bcd_count[0].CLK
 clk => bcd_count[1].CLK
 clk => bcd_count[2].CLK
 clk => bcd_count[3].CLK
-
-
-|lab3|enc2bcd:enc2bcd_1
-clk => ccw_pulse.CLK
-clk => ccw_pulse_count[0].CLK
-clk => ccw_pulse_count[1].CLK
-clk => ccw_pulse_count[2].CLK
-clk => bcd_count[0]~reg0.CLK
-clk => bcd_count[1]~reg0.CLK
-clk => bcd_count[2]~reg0.CLK
-clk => bcd_count[3]~reg0.CLK
-clk => cw_pulse.CLK
-clk => cw_pulse_count[0].CLK
-clk => cw_pulse_count[1].CLK
-clk => cw_pulse_count[2].CLK
-cw => cw_pulse_count.OUTPUTSELECT
-cw => cw_pulse_count.OUTPUTSELECT
-cw => cw_pulse_count.OUTPUTSELECT
-cw => cw_pulse.OUTPUTSELECT
-ccw => ccw_pulse_count.OUTPUTSELECT
-ccw => ccw_pulse_count.OUTPUTSELECT
-ccw => ccw_pulse_count.OUTPUTSELECT
-ccw => ccw_pulse.OUTPUTSELECT
-bcd_count[0] <= bcd_count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-bcd_count[1] <= bcd_count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-bcd_count[2] <= bcd_count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-bcd_count[3] <= bcd_count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-bcd_count[4] <= <GND>
-bcd_count[5] <= <GND>
-bcd_count[6] <= <GND>
-bcd_count[7] <= <GND>
 
 

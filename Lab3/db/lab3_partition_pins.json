@@ -56,15 +56,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
 					"name" : "enc1_b",
 					"strict" : false
 				},
 				{
 					"name" : "enc1_a",
-					"strict" : false
-				},
-				{
-					"name" : "s1",
 					"strict" : false
 				},
 				{

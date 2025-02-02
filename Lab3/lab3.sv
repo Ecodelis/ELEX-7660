@@ -36,7 +36,7 @@ module lab3 ( input logic CLOCK_50,       // 50 MHz clock
 
    enc2freq enc2freq_1 (.clk(CLOCK_50), .cw(enc1_cw), .ccw(enc1_ccw), .freq(tone_freq), .reset_n(reset_n));
 
-   enc2bcd enc2bcd_1 (.clk(CLOCK_50), .cw(enc1_cw), .ccw(enc1_ccw), .bcd_count(enc1_count));
+   //enc2bcd enc2bcd_1 (.clk(CLOCK_50), .cw(enc1_cw), .ccw(enc1_ccw), .bcd_count(enc1_count));
 
    // use count to divide clock and generate a 2 bit digit counter to determine which digit to display
    always_ff @(posedge CLOCK_50) begin
@@ -68,11 +68,11 @@ module lab3 ( input logic CLOCK_50,       // 50 MHz clock
 		 disp_digit = 4'b0000;
 
 		 case (digit)
-			  // 2'b01: disp_digit = enc2_count[7:4]; // Left tens
-			  // 2'b00: disp_digit = enc2_count[3:0]; // left ones
+			  2'b01: disp_digit = tone_freq[15:11]; // Left tens
+			  2'b00: disp_digit = tone_freq[11:8]; // left ones
 			  
-			  2'b11: disp_digit = enc1_count[7:4]; // right tens
-			  2'b10: disp_digit = enc1_count[3:0]; // right ones
+			  2'b11: disp_digit = tone_freq[7:4]; // right tens
+			  2'b10: disp_digit = tone_freq[3:0]; // right ones
 			  default: disp_digit = 4'b0000; // Assign a default value
 		 endcase
 	end
