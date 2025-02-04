@@ -6,9 +6,7 @@
 // Date: 2024-02-01
 
 module lab3 ( input logic CLOCK_50,       // 50 MHz clock
-              (* altera_attribute = "-name WEAK_PULL_UP_RESISTOR ON" *) 
-              input logic enc1_a, enc1_b, //Encoder 1 pins
-				      (* altera_attribute = "-name WEAK_PULL_UP_RESISTOR ON" *) input logic 
+				  (* altera_attribute = "-name WEAK_PULL_UP_RESISTOR ON" *) input logic 
               enc2_a, enc2_b,				      //Encoder 2 pins
               input logic s1, s2,         // pushbuttons
               output logic [7:0] leds,    // 7-seg LED enables

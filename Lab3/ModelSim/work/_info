@@ -10,97 +10,97 @@ cModel Technology
 dC:/Software/Quartus_18-1
 venc2freq
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1738481243
+!s110 1738632658
 !i10b 1
-!s100 ?0:I@9oITLR=`AOkzLl3I3
-I`CMA_80FJDVPPNcZB[3Bi0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 bkJ]PX[AJPUi>XQ^?93cT3
+I=6fZ69YCl<DMiZFhmzWVm0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 !s105 enc2freq_sv_unit
 S1
-Z3 dC:/SHAMM/github repos/ELEX-7660/Lab3/ModelSim
-w1738479410
+Z2 dC:/SHAMM/github repos/ELEX-7660/Lab3/ModelSim
+w1738522287
 8C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv
 L0 7
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1738481243.000000
+Z4 !s108 1738632658.000000
 !s107 C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv|
 !i113 1
-Z6 o-work work -sv
-Z7 tCvgOpt 0
+Z5 o-work work -sv
+Z6 tCvgOpt 0
 venc2freq_tb
 R0
-R1
+Z7 !s110 1738632659
 !i10b 1
-!s100 KdCh;NhPiK:<Kk]g=ZP3l1
-Io_;?jzGgISicn_`GalM>C1
-R2
+!s100 V7cEU4fz;<eQeH5l0Y5NR3
+I_7kn4S5OP:Gi8gF4?zNj_0
+R1
 !s105 enc2freq_tb_sv_unit
 S1
-R3
-w1738474849
+R2
+w1738632653
 8C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq_tb.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq_tb.sv
 L0 8
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq_tb.sv|
 !i113 1
+R5
 R6
-R7
 vtonegen
 R0
-R1
+R7
 !i10b 1
 !s100 DJn:7]J9DonWJ:VZE_^AM0
 IW2FgUZYeRMNk2IHN?Xl?40
-R2
+R1
 !s105 tonegen_sv_unit
 S1
-R3
+R2
 w1738481232
 8C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab3/tonegen.sv
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
+Z8 !s108 1738632659.000000
 !s107 C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen.sv|
 !i113 1
+R5
 R6
-R7
 vtonegen_tb
 R0
-R1
+R7
 !i10b 1
-!s100 `DXIjI9E7Ya8XV[^71<MF0
-Ig=Y_W^gmS>9<m9V78]foM3
-R2
+!s100 NHefV;^=4V`M4Zjk9zn;Y2
+IF92=_G3_>PB3mSOi_VOlj2
+R1
 !s105 tonegen_tb_sv_unit
 S1
-R3
-w1738481172
+R2
+w1738481308
 8C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen_tb.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab3/tonegen_tb.sv
 L0 9
-R4
+R3
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen_tb.sv|
 !i113 1
+R5
 R6
-R7

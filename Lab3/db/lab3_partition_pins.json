@@ -60,11 +60,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "enc1_b",
+					"name" : "enc2_b",
 					"strict" : false
 				},
 				{
-					"name" : "enc1_a",
+					"name" : "enc2_a",
 					"strict" : false
 				},
 				{

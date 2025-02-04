@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3
-Sat Feb 01 23:56:42 2025
+Mon Feb 03 17:47:26 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,14 +48,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Feb 01 23:56:42 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 03 17:47:26 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab3                                        ;
 ; Top-level Entity Name           ; lab3                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 97                                          ;
-; Total pins                      ; 20                                          ;
+; Total registers                 ; 95                                          ;
+; Total pins                      ; 18                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 6                                           ;
@@ -193,25 +193,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 117            ;
+; Estimate of Logic utilization (ALMs needed) ; 118            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 218            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 15             ;
-;     -- 5 input functions                    ; 4              ;
-;     -- 4 input functions                    ; 25             ;
-;     -- <=3 input functions                  ; 174            ;
+; Combinational ALUT usage for logic          ; 215            ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 17             ;
+;     -- 5 input functions                    ; 2              ;
+;     -- 4 input functions                    ; 21             ;
+;     -- <=3 input functions                  ; 173            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 97             ;
+; Dedicated logic registers                   ; 95             ;
 ;                                             ;                ;
-; I/O pins                                    ; 20             ;
+; I/O pins                                    ; 18             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 6              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 97             ;
-; Total fan-out                               ; 1080           ;
-; Average fan-out                             ; 2.99           ;
+; Maximum fan-out                             ; 95             ;
+; Total fan-out                               ; 1072           ;
+; Average fan-out                             ; 3.05           ;
 +---------------------------------------------+----------------+
 
 
@@ -220,11 +220,11 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
-; |lab3                      ; 218 (23)            ; 97 (18)                   ; 0                 ; 6          ; 20   ; 0            ; |lab3                     ; lab3        ; work         ;
+; |lab3                      ; 215 (23)            ; 95 (18)                   ; 0                 ; 6          ; 18   ; 0            ; |lab3                     ; lab3        ; work         ;
 ;    |decode2:decode2_0|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|decode2:decode2_0   ; decode2     ; work         ;
 ;    |decode7:decode7_0|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|decode7:decode7_0   ; decode7     ; work         ;
-;    |enc2freq:enc2freq_1|   ; 27 (27)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |lab3|enc2freq:enc2freq_1 ; enc2freq    ; work         ;
-;    |encoder:encoder_1|     ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|encoder:encoder_1   ; encoder     ; work         ;
+;    |enc2freq:enc2freq_2|   ; 24 (24)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|enc2freq:enc2freq_2 ; enc2freq    ; work         ;
+;    |encoder:encoder_2|     ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|encoder:encoder_2   ; encoder     ; work         ;
 ;    |tonegen:tonegen_1|     ; 158 (158)           ; 65 (65)                   ; 0                 ; 6          ; 0    ; 0            ; |lab3|tonegen:tonegen_1   ; tonegen     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -245,15 +245,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; enc2freq:enc2freq_1|ccw_pulse         ; Stuck at GND due to stuck port data_in ;
-; enc2freq:enc2freq_1|cw_pulse          ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; enc2freq:enc2freq_2|ccw_pulse_count[2] ; Stuck at GND due to stuck port data_in ;
+; enc2freq:enc2freq_2|cw_pulse_count[2]  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2  ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -261,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 97    ;
+; Total registers                              ; 95    ;
 ; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -276,9 +276,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab3|enc2freq:enc2freq_1|cw_pulse_count[0]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab3|enc2freq:enc2freq_1|ccw_pulse_count[0] ;
-; 4:1                ; 64 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |lab3|tonegen:tonegen_1|counter[50]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab3|enc2freq:enc2freq_2|ccw_pulse_count[1] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab3|enc2freq:enc2freq_2|cw_pulse_count[1]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |lab3|tonegen:tonegen_1|counter[46]          ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |lab3|Mux1                                   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |lab3|Mux2                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
@@ -289,8 +289,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------+------+---------+
 ; Assignment            ; Value ; From ; To      ;
 +-----------------------+-------+------+---------+
-; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc1_a  ;
-; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc1_b  ;
 ; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc2_a  ;
 ; WEAK_PULL_UP_RESISTOR ; ON    ; -    ; enc2_b  ;
 +-----------------------+-------+------+---------+
@@ -311,30 +309,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 97                          ;
+; arriav_ff             ; 95                          ;
 ;     ENA               ; 4                           ;
 ;     SCLR              ; 64                          ;
-;     plain             ; 29                          ;
-; arriav_lcell_comb     ; 227                         ;
+;     plain             ; 27                          ;
+; arriav_lcell_comb     ; 224                         ;
 ;     arith             ; 121                         ;
 ;         1 data inputs ; 86                          ;
 ;         2 data inputs ; 35                          ;
-;     normal            ; 69                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 64                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 11                          ;
+;         2 data inputs ; 10                          ;
 ;         3 data inputs ; 4                           ;
-;         4 data inputs ; 25                          ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 15                          ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 17                          ;
 ;     shared            ; 37                          ;
 ;         2 data inputs ; 31                          ;
 ;         3 data inputs ; 6                           ;
 ; arriav_mac            ; 6                           ;
-; boundary_port         ; 20                          ;
+; boundary_port         ; 18                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.30                        ;
-; Average LUT depth     ; 5.19                        ;
+; Average LUT depth     ; 5.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -353,7 +353,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Feb 01 23:56:30 2025
+    Info: Processing started: Mon Feb 03 17:47:13 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -376,35 +376,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file decode2
 Info (12021): Found 1 design units, including 1 entities, in source file tonegen_tb.sv
     Info (12023): Found entity 1: tonegen_tb File: C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen_tb.sv Line: 9
 Info (12127): Elaborating entity "lab3" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at lab3.sv(71): truncated value with size 5 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 71
-Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 29
-Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 30
-Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_1" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 32
-Info (12128): Elaborating entity "tonegen" for hierarchy "tonegen:tonegen_1" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 35
-Info (12128): Elaborating entity "enc2freq" for hierarchy "enc2freq:enc2freq_1" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at lab3.sv(66): truncated value with size 5 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 66
+Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 27
+Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 28
+Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_2" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 30
+Info (12128): Elaborating entity "tonegen" for hierarchy "tonegen:tonegen_1" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 32
+Info (12128): Elaborating entity "enc2freq" for hierarchy "enc2freq:enc2freq_2" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 34
 Warning (10230): Verilog HDL assignment warning at enc2freq.sv(27): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at enc2freq.sv(48): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at enc2freq.sv(39): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab3/enc2freq.sv Line: 39
 Info (13014): Ignored 2 buffer(s)
     Info (13019): Ignored 2 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "leds[7]" is stuck at GND File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 14
+    Warning (13410): Pin "leds[7]" is stuck at GND File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/SHAMM/github repos/ELEX-7660/Lab3/output_files/lab3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "enc2_a" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 12
-    Warning (15610): No output dependent on input pin "enc2_b" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 12
-Info (21057): Implemented 248 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 243 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 222 logic cells
+    Info (21061): Implemented 219 logic cells
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Sat Feb 01 23:56:42 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Mon Feb 03 17:47:26 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

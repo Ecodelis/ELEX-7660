@@ -14,7 +14,7 @@ module enc2freq_tb;
     logic [31:0] freq;
 
     // Expected frequency values for each count
-    int expected_count[9] = '{0, 262, 295, 328, 349, 393, 437, 491, 524};
+    int expected_count[] = '{0, 262, 295, 328, 349, 393, 437, 491, 524};
 
     // Tracks index
     int index = 0;

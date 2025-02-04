@@ -1,9 +1,7 @@
 |lab3
 CLOCK_50 => CLOCK_50.IN1
-enc1_a => comb.DATAIN
-enc1_b => comb.DATAIN
-enc2_a => ~NO_FANOUT~
-enc2_b => ~NO_FANOUT~
+enc2_a => comb.DATAIN
+enc2_b => comb.DATAIN
 s1 => reset_n.DATAIN
 s2 => onOff.DATAIN
 leds[0] <= decode7:decode7_0.leds
@@ -45,7 +43,7 @@ leds[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 leds[7] <= <GND>
 
 
-|lab3|encoder:encoder_1
+|lab3|encoder:encoder_2
 clk => b_prev.CLK
 clk => a_prev.CLK
 clk => ccw~reg0.CLK
@@ -291,15 +289,21 @@ clk => counter[62].CLK
 clk => counter[63].CLK
 
 
-|lab3|enc2freq:enc2freq_1
+|lab3|enc2freq:enc2freq_2
 cw => cw_pulse_count.OUTPUTSELECT
 cw => cw_pulse_count.OUTPUTSELECT
 cw => cw_pulse_count.OUTPUTSELECT
-cw => cw_pulse.OUTPUTSELECT
+cw => bcd_count.OUTPUTSELECT
+cw => bcd_count.OUTPUTSELECT
+cw => bcd_count.OUTPUTSELECT
+cw => bcd_count.OUTPUTSELECT
 ccw => ccw_pulse_count.OUTPUTSELECT
 ccw => ccw_pulse_count.OUTPUTSELECT
 ccw => ccw_pulse_count.OUTPUTSELECT
-ccw => ccw_pulse.OUTPUTSELECT
+ccw => bcd_count.OUTPUTSELECT
+ccw => bcd_count.OUTPUTSELECT
+ccw => bcd_count.OUTPUTSELECT
+ccw => bcd_count.OUTPUTSELECT
 freq[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 freq[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 freq[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
@@ -336,11 +340,15 @@ reset_n => bcd_count.OUTPUTSELECT
 reset_n => bcd_count.OUTPUTSELECT
 reset_n => bcd_count.OUTPUTSELECT
 reset_n => bcd_count.OUTPUTSELECT
-clk => ccw_pulse.CLK
+reset_n => cw_pulse_count.OUTPUTSELECT
+reset_n => cw_pulse_count.OUTPUTSELECT
+reset_n => cw_pulse_count.OUTPUTSELECT
+reset_n => ccw_pulse_count.OUTPUTSELECT
+reset_n => ccw_pulse_count.OUTPUTSELECT
+reset_n => ccw_pulse_count.OUTPUTSELECT
 clk => ccw_pulse_count[0].CLK
 clk => ccw_pulse_count[1].CLK
 clk => ccw_pulse_count[2].CLK
-clk => cw_pulse.CLK
 clk => cw_pulse_count[0].CLK
 clk => cw_pulse_count[1].CLK
 clk => cw_pulse_count[2].CLK
