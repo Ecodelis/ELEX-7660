@@ -1,0 +1,22 @@
+{C:/SHAMM/github repos/ELEX-7660/Assignment1/shiftreg.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment1/shiftreg.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shiftreg
+
+Top level modules:
+	shiftreg
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Assignment1/encoder.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment1/encoder.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module encoder
+
+Top level modules:
+	encoder
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Assignment1/encoder_tb.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment1/encoder_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module encoder_tb
+
+Top level modules:
+	encoder_tb
+
+} {} {}}

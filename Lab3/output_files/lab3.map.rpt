@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3
-Mon Feb 03 17:47:26 2025
+Tue Feb 04 13:34:44 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 03 17:47:26 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Feb 04 13:34:44 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab3                                        ;
 ; Top-level Entity Name           ; lab3                                        ;
@@ -220,8 +220,8 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+-------------+--------------+
-; |lab3                      ; 215 (23)            ; 95 (18)                   ; 0                 ; 6          ; 18   ; 0            ; |lab3                     ; lab3        ; work         ;
-;    |decode2:decode2_0|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|decode2:decode2_0   ; decode2     ; work         ;
+; |lab3                      ; 215 (22)            ; 95 (18)                   ; 0                 ; 6          ; 18   ; 0            ; |lab3                     ; lab3        ; work         ;
+;    |decode2:decode2_0|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|decode2:decode2_0   ; decode2     ; work         ;
 ;    |decode7:decode7_0|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|decode7:decode7_0   ; decode7     ; work         ;
 ;    |enc2freq:enc2freq_2|   ; 24 (24)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|enc2freq:enc2freq_2 ; enc2freq    ; work         ;
 ;    |encoder:encoder_2|     ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |lab3|encoder:encoder_2   ; encoder     ; work         ;
@@ -313,15 +313,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 4                           ;
 ;     SCLR              ; 64                          ;
 ;     plain             ; 27                          ;
-; arriav_lcell_comb     ; 224                         ;
+; arriav_lcell_comb     ; 225                         ;
 ;     arith             ; 121                         ;
 ;         1 data inputs ; 86                          ;
 ;         2 data inputs ; 35                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 64                          ;
+;     normal            ; 65                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
+;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 10                          ;
 ;         3 data inputs ; 4                           ;
 ;         4 data inputs ; 21                          ;
@@ -334,7 +334,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 18                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.30                        ;
-; Average LUT depth     ; 5.13                        ;
+; Average LUT depth     ; 5.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -343,7 +343,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -353,7 +353,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 03 17:47:13 2025
+    Info: Processing started: Tue Feb 04 13:34:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -376,7 +376,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file decode2
 Info (12021): Found 1 design units, including 1 entities, in source file tonegen_tb.sv
     Info (12023): Found entity 1: tonegen_tb File: C:/SHAMM/github repos/ELEX-7660/Lab3/tonegen_tb.sv Line: 9
 Info (12127): Elaborating entity "lab3" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at lab3.sv(66): truncated value with size 5 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 66
 Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 27
 Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 28
 Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_2" File: C:/SHAMM/github repos/ELEX-7660/Lab3/lab3.sv Line: 30
@@ -397,11 +396,11 @@ Info (21057): Implemented 243 device resources after synthesis - the final resou
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 219 logic cells
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4833 megabytes
-    Info: Processing ended: Mon Feb 03 17:47:26 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Tue Feb 04 13:34:44 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+

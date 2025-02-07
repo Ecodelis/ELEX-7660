@@ -63,11 +63,11 @@ module lab3 ( input logic CLOCK_50,       // 50 MHz clock
 		 disp_digit = 4'b0000;
 
 		 case (digit)
-			  2'b01: disp_digit = tone_freq[15:11]; // Left tens
-			  2'b00: disp_digit = tone_freq[11:8]; // left ones
+			  2'b01: disp_digit = tone_freq[3:0]; // Left tens
+			  2'b00: disp_digit = tone_freq[7:4]; // left ones
 			  
-			  2'b11: disp_digit = tone_freq[7:4]; // right tens
-			  2'b10: disp_digit = tone_freq[3:0]; // right ones
+			  2'b11: disp_digit = tone_freq[11:8]; // right tens
+			  2'b10: disp_digit = tone_freq[15:12]; // right ones
 			  default: disp_digit = 4'b0000; // Assign a default value
 		 endcase
 	end
