@@ -1,22 +1,18 @@
 module adcinterface(
-    input  logic        clk,       // clock (1.560 MHz) and reset
-    input  logic        reset_n,   // active-low reset
-    input  logic [2:0]  chan,      // ADC channel to sample
-    output logic [11:0] result,    // ADC result
-    
-    // LTC2308 signals
-    output logic ADC_CONVST, 
-    output logic ADC_SCK, 
-    output logic ADC_SDI,
-    input  logic ADC_SDO
-);
+    input logic clk, reset_n, // clock (1.560mhz) and active-low reset
+    input logic [2:0] chan, // ADC channel to sample
+    output logic [11:0] result, // ADC result
+    // ltc2308 signals
+    output logic ADC_CONVST, ADC_SCK, ADC_SDI,
+    input logic ADC_SDO
+    );
 
     enum logic [1:0] {
         INIT_CONV,     // Initialize conversion (e.g., assert ADC_CONVST)
         LOW_CONV,      // Conversion signal low
         DATA_TRANSFER, // Data transfer state
         PAUSE_SCK      // Pause state for SCK
-    } state, next_state;
+    } state = PAUSE_SCK, next_state;
 
     // State Machine Signals
     logic [3:0] delay, next_delay;  // Delay counter
@@ -34,13 +30,13 @@ module adcinterface(
 
     // On every posedge clk, if delay reaches 0, update state and reload delay.
     always_ff @(posedge clk) begin
-        if (!reset_n) begin
-            state <= INIT_CONV;
-            delay <= 1;
-            ADC_CONVST <= 1;
+        if (reset_n == 0) begin
+            state <= PAUSE_SCK;
+            delay <= 1; // 2 cycle delay 
+            ADC_CONVST <= 0;
             ADC_SDI <= 0;
             result <= 0;
-            shift_count <= 6; // Load shift count for ADC_SDI
+            shift_count <= 5; // Load shift count for ADC_SDI
         end else begin
             if (delay == 0) begin
                 state <= next_state; // Update state
@@ -63,15 +59,15 @@ module adcinterface(
             end
             LOW_CONV: begin
                 next_state = DATA_TRANSFER;
-                next_delay = 12;  // Load 12 cycle delay for the next state
+                next_delay = 11;  // Load 12 cycle delay for the next state
             end
             DATA_TRANSFER: begin
                 next_state = PAUSE_SCK;
-                next_delay = 1;  // Load 1 cycle delay for the next state
+                next_delay = 0;  // Load 1 cycle delay for the next state
             end
             PAUSE_SCK: begin
                 next_state = INIT_CONV;
-                next_delay = 1;  // Load 1 cycle delay for the next state
+                next_delay = 0;  // Load 1 cycle delay for the next state
             end
             default: next_state = INIT_CONV;
         endcase
@@ -81,6 +77,7 @@ module adcinterface(
 // --- ADC INTERFACE LOGIC SECTION ---
 //---------------------------------------------------------
 
+    // timing issue here??
     assign ADC_SCK = (state == DATA_TRANSFER) ? clk : 0; // SCK is high during DATA_TRANSFER state
 
     // Address Select Combinational Logic
@@ -102,8 +99,18 @@ module adcinterface(
 
 
     always_ff @(posedge clk) begin
-        if (state == LOW_CONV) begin
-            shift_count <= 6; // Load shift count for ADC_SDI
+        if (state == INIT_CONV) begin
+            ADC_CONVST <= 1; // Assert ADC_CONVST (starts conversion)
+            result <= 1;
+        end
+
+        else if (state == LOW_CONV) begin
+            ADC_CONVST <= 0; // Deassert ADC_CONVST
+
+            shift_count <= 5; // Load shift count for ADC_SDI (MSB)
+
+            config_word <= {1'b1, address_select, 1'b0, 1'b0}; // Load in config before data transfer
+            result <= 2; 
         end
 
         else if (state == DATA_TRANSFER) begin
@@ -115,10 +122,15 @@ module adcinterface(
             // UNI = Unipolar/Bipolar Bit
             // SLP = Sleep Mode Bit
             // Filler 0 Bits
-            config_word <= {1'b1, address_select, 1'b0, 1'b0}; // Load in config before negedge
-
+            
+            result <= 3; 
             // Shift in data from ADC_SDO
-            result <= {ADC_SDO, result[11:1]};
+            //result <= {ADC_SDO, result[11:1]};
+        end
+        
+        else begin
+            ADC_CONVST <= 0; // safety (not needed)
+            result <= 4;
         end
     end
 

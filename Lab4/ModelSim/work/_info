@@ -7,28 +7,28 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/SHAMM/github repos/ELEX-7660/Lab4
+dC:/Software/Quartus_18-1
 vadcinterface
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1739011190
+Z1 !s110 1739056523
 !i10b 1
-!s100 67KKk[AEjC?TTS5PQOFeU1
-IIbP7`D>@QR>:2H7>;EEIF0
+!s100 2Qi]Nz=L^1a5<8WChJ=c70
+IfM0@bIHhYTY<[SIo?QUm72
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 adcinterface_sv_unit
 S1
 Z3 dC:/SHAMM/github repos/ELEX-7660/Lab4/ModelSim
-w1739011186
-8C:\SHAMM\github repos\ELEX-7660\Lab4\adcinterface.sv
-FC:\SHAMM\github repos\ELEX-7660\Lab4\adcinterface.sv
+w1739056519
+8C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv
+FC:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1739011190.000000
-!s107 C:\SHAMM\github repos\ELEX-7660\Lab4\adcinterface.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\SHAMM\github repos\ELEX-7660\Lab4\adcinterface.sv|
+Z5 !s108 1739056523.000000
+!s107 C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv|
 !i113 1
 Z6 o-work work -sv
 Z7 tCvgOpt 0
@@ -42,7 +42,7 @@ R2
 !s105 adcinterface_tb_sv_unit
 S1
 R3
-w1738958143
+w1739054566
 8C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv
 L0 6
