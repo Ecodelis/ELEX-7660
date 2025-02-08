@@ -31,9 +31,13 @@ module lab2 ( input logic CLOCK_50,       // 50 MHz clock
    enc2bcd enc2bcd_2 (.clk(CLOCK_50), .cw(enc2_cw), .ccw(enc2_ccw), .bcd_count(enc2_count));
 
    // use count to divide clock and generate a 2 bit digit counter to determine which digit to display
-   always_ff @(posedge CLOCK_50) 
+   always_ff @(posedge CLOCK_50) begin
      clk_div_count <= clk_div_count + 1'b1 ;
 
+   // Divide clock by 32 to generate a 1.5625 MHz clock
+    if (clk_div_count)
+
+   end
 	// assign the top two bits of count to select digit to display
 	assign digit = clk_div_count[15:14]; 
 
