@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Fri Feb 07 10:55:44 2025
+Mon Feb 10 23:38:18 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,6 +11,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Feb 07 10:55:44 2025           ;
+; Analysis & Synthesis Status ; Failed - Mon Feb 10 23:38:18 2025           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; lab4                                        ;
 ; Top-level Entity Name       ; lab4                                        ;
@@ -160,15 +161,65 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Feb 07 10:55:30 2025
+    Info: Processing started: Mon Feb 10 23:38:06 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (12007): Top-level design entity "lab4" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Fri Feb 07 10:55:44 2025
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:10
+Info (12021): Found 1 design units, including 1 entities, in source file lab4.sv
+    Info (12023): Found entity 1: lab4 File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file encoder.sv
+    Info (12023): Found entity 1: encoder File: C:/SHAMM/github repos/ELEX-7660/Lab4/encoder.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file enc2chan.sv
+    Info (12023): Found entity 1: enc2freq File: C:/SHAMM/github repos/ELEX-7660/Lab4/enc2chan.sv Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file decode7.sv
+    Info (12023): Found entity 1: decode7 File: C:/SHAMM/github repos/ELEX-7660/Lab4/decode7.sv Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file decode2.sv
+    Info (12023): Found entity 1: decode2 File: C:/SHAMM/github repos/ELEX-7660/Lab4/decode2.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file adcinterface_tb.sv
+    Info (12023): Found entity 1: adcinterface_tb File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file adcinterface.sv
+    Info (12023): Found entity 1: adcinterface File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 1
+Info (12127): Elaborating entity "lab4" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at lab4.sv(25): object "onOff" assigned a value but never read File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 25
+Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 32
+Info (12128): Elaborating entity "decode7" for hierarchy "decode7:decode7_0" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 34
+Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_1" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 36
+Info (12128): Elaborating entity "adcinterface" for hierarchy "adcinterface:adcinterface_1" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(46): truncated value with size 32 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(87): truncated value with size 32 to match size of target (1) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(124): truncated value with size 32 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 124
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(143): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 143
+Error (10028): Can't resolve multiple constant drivers for net "result[11]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10029): Constant driver at adcinterface.sv(32) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 32
+Error (10028): Can't resolve multiple constant drivers for net "result[10]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[9]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[8]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[7]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[6]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[5]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[4]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[3]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[2]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[1]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "result[0]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "ADC_CONVST" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "ADC_SDI" at adcinterface.sv(136) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 136
+Error (10028): Can't resolve multiple constant drivers for net "shift_count[2]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "shift_count[1]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "shift_count[0]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (10028): Can't resolve multiple constant drivers for net "shift_count_SDO[3]" at adcinterface.sv(105) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 105
+Error (12152): Can't elaborate user hierarchy "adcinterface:adcinterface_1" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 40
+Info (144001): Generated suppressed messages file C:/SHAMM/github repos/ELEX-7660/Lab4/output_files/lab4.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 6 warnings
+    Error: Peak virtual memory: 4773 megabytes
+    Error: Processing ended: Mon Feb 10 23:38:18 2025
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_files/lab4.map.smsg.
 
 

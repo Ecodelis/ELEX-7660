@@ -22,6 +22,8 @@ module adcinterface(
     logic [5:0] config_word;  // 6-bit Configuration word for ADC
     logic [2:0] address_select;  // Address select for ADC (assuming single-ended mode)
     logic [2:0] shift_count;  // Shift counter for ADC_SDI
+    logic [2:0] shift_count_SDO;  // Shift counter for ADC_SDO
+    logic enable_sck;  // Gate clk signal
     
 
 //---------------------------------------------------------
@@ -32,13 +34,13 @@ module adcinterface(
     always_ff @(posedge clk) begin
         if (reset_n == 0) begin
             state <= PAUSE_SCK;
-            delay <= 1; // 2 cycle delay 
             ADC_CONVST <= 0;
             ADC_SDI <= 0;
             result <= 0;
+            delay <= 0;
             shift_count <= 5; // Load shift count for ADC_SDI
         end else begin
-            if (delay == 0) begin
+            if (delay <= 1) begin // If delay reaches 1, update state in this cycle, and change state in the next cycle
                 state <= next_state; // Update state
                 delay <= next_delay; // Load in delay for the next state
             end else begin
@@ -59,15 +61,15 @@ module adcinterface(
             end
             LOW_CONV: begin
                 next_state = DATA_TRANSFER;
-                next_delay = 11;  // Load 12 cycle delay for the next state
+                next_delay = 12;  // Load 12 cycle delay for the next state
             end
             DATA_TRANSFER: begin
                 next_state = PAUSE_SCK;
-                next_delay = 0;  // Load 1 cycle delay for the next state
+                next_delay = 1;  // Load 1 cycle delay for the next state
             end
             PAUSE_SCK: begin
                 next_state = INIT_CONV;
-                next_delay = 0;  // Load 1 cycle delay for the next state
+                next_delay = 1;  // Load 1 cycle delay for the next state
             end
             default: next_state = INIT_CONV;
         endcase
@@ -77,8 +79,8 @@ module adcinterface(
 // --- ADC INTERFACE LOGIC SECTION ---
 //---------------------------------------------------------
 
-    // timing issue here??
-    assign ADC_SCK = (state == DATA_TRANSFER) ? clk : 0; // SCK is high during DATA_TRANSFER state
+    // Enable SCK signal during DATA_TRANSFER state
+    assign ADC_SCK = (enable_sck) ? clk : 0; // SCK is high during DATA_TRANSFER state
 
     // Address Select Combinational Logic
     always_comb begin
@@ -101,7 +103,6 @@ module adcinterface(
     always_ff @(posedge clk) begin
         if (state == INIT_CONV) begin
             ADC_CONVST <= 1; // Assert ADC_CONVST (starts conversion)
-            result <= 1;
         end
 
         else if (state == LOW_CONV) begin
@@ -109,8 +110,9 @@ module adcinterface(
 
             shift_count <= 5; // Load shift count for ADC_SDI (MSB)
 
-            config_word <= {1'b1, address_select, 1'b0, 1'b0}; // Load in config before data transfer
-            result <= 2; 
+            shift_count_SDO <= 11; // Load shift count for ADC_SDO  
+
+            config_word <= {1'b1, address_select, 1'b0, 1'b0}; // Load in config while data transfer
         end
 
         else if (state == DATA_TRANSFER) begin
@@ -122,15 +124,20 @@ module adcinterface(
             // UNI = Unipolar/Bipolar Bit
             // SLP = Sleep Mode Bit
             // Filler 0 Bits
-            
-            result <= 3; 
+    
             // Shift in data from ADC_SDO
-            //result <= {ADC_SDO, result[11:1]};
+            if (shift_count_SDO >= 0) begin
+                result <= {ADC_SDO, result[11:1]};
+
+                shift_count_SDO <= shift_count_SDO - 1;
+            end
+
+            enable_sck<= 1; // Enable SCK signal
         end
         
         else begin
-            ADC_CONVST <= 0; // safety (not needed)
-            result <= 4;
+            ADC_CONVST <= 0; // safety measure
+            enable_sck<= 0; // Disable SCK signal
         end
     end
 
@@ -143,6 +150,8 @@ module adcinterface(
             // Decrement shift count (next cycle)
             shift_count <= shift_count - 1;
             end else begin
+                // do nothing
+                
                 ADC_SDI <= 0; // Load in 0 after all bits have been shifted
             end
 
