@@ -4,7 +4,7 @@
 // Author: Marcus Fu
 // Date: 2024-02-03
 
-module enc2freq
+module enc2chan
     ( input logic cw, ccw, // outputs from lab 2 encoder module
     output logic [2:0] chan, // desired frequency
     input logic reset_n, clk); // reset and clock

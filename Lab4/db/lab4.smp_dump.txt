@@ -1,0 +1,7 @@
+
+State Machine - |lab4|adcinterface:adcinterface_1|state
+Name state.PAUSE_SCK state.DATA_TRANSFER state.LOW_CONV state.INIT_CONV 
+state.INIT_CONV 0 0 0 0 
+state.LOW_CONV 0 0 1 1 
+state.DATA_TRANSFER 0 1 0 1 
+state.PAUSE_SCK 1 0 0 1 

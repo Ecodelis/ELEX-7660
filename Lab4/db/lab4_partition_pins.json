@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDI",
+					"strict" : false
+				},
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ct[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
+					"name" : "enc1_a",
+					"strict" : false
+				},
+				{
+					"name" : "enc1_b",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
