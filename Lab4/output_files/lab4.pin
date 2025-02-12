@@ -203,7 +203,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :      
 GND                          : AE16      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
 GND                          : AE18      : gnd    :                   :         :           :                
-s2                           : AE19      : input  : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
 leds[4]                      : AE20      : output : 2.5 V             :         : 4A        : Y              
 VCCIO4A                      : AE21      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4A        :                

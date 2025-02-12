@@ -1,0 +1,5 @@
+
+State Machine - |vendingMachine|state
+Name state.RESET 
+state.DETECT 0 
+state.RESET 1 

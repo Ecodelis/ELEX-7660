@@ -13,7 +13,7 @@ module enc2chan
     logic [2:0] ccw_pulse_count = 3'b000; // Counts the number of CCW pulses
     logic [3:0] bcd_count = 4'b0000; // BCD count 
 
-    logic [3:0] max_count = 4'b0100; // Max count
+    logic [3:0] max_count = 4'b0101; // Max count
     logic [3:0] min_count = 4'b0000; // Min count
 
     always_ff @(posedge clk) begin

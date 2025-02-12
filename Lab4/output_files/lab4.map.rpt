@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Tue Feb 11 01:39:09 2025
+Wed Feb 12 10:42:27 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,14 +48,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 11 01:39:09 2025       ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 12 10:42:27 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab4                                        ;
 ; Top-level Entity Name           ; lab4                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 81                                          ;
-; Total pins                      ; 21                                          ;
+; Total pins                      ; 20                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -198,19 +198,19 @@ refer to the applicable agreement for further details.
 ;     -- 7 input functions                    ; 1                 ;
 ;     -- 6 input functions                    ; 26                ;
 ;     -- 5 input functions                    ; 12                ;
-;     -- 4 input functions                    ; 16                ;
-;     -- <=3 input functions                  ; 34                ;
+;     -- 4 input functions                    ; 15                ;
+;     -- <=3 input functions                  ; 35                ;
 ;                                             ;                   ;
 ; Dedicated logic registers                   ; 81                ;
 ;                                             ;                   ;
-; I/O pins                                    ; 21                ;
+; I/O pins                                    ; 20                ;
 ;                                             ;                   ;
 ; Total DSP Blocks                            ; 0                 ;
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; clk_div_count[15] ;
 ; Maximum fan-out                             ; 51                ;
-; Total fan-out                               ; 585               ;
-; Average fan-out                             ; 2.76              ;
+; Total fan-out                               ; 583               ;
+; Average fan-out                             ; 2.78              ;
 +---------------------------------------------+-------------------+
 
 
@@ -219,7 +219,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name  ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+--------------+--------------+
-; |lab4                            ; 89 (20)             ; 81 (29)                   ; 0                 ; 0          ; 21   ; 0            ; |lab4                             ; lab4         ; work         ;
+; |lab4                            ; 89 (20)             ; 81 (29)                   ; 0                 ; 0          ; 20   ; 0            ; |lab4                             ; lab4         ; work         ;
 ;    |adcinterface:adcinterface_1| ; 45 (45)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |lab4|adcinterface:adcinterface_1 ; adcinterface ; work         ;
 ;    |decode2:decode2_0|           ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab4|decode2:decode2_0           ; decode2      ; work         ;
 ;    |decode7:decode7_0|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab4|decode7:decode7_0           ; decode7      ; work         ;
@@ -330,11 +330,11 @@ Encoding Type:  One-Hot
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 14                          ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 16                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 15                          ;
 ;         5 data inputs ; 12                          ;
 ;         6 data inputs ; 26                          ;
-; boundary_port         ; 21                          ;
+; boundary_port         ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
 ; Average LUT depth     ; 1.88                        ;
@@ -356,7 +356,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Feb 11 01:38:54 2025
+    Info: Processing started: Wed Feb 12 10:42:14 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -373,7 +373,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file decode2
 Info (12021): Found 1 design units, including 1 entities, in source file adcinterface_tb.sv
     Info (12023): Found entity 1: adcinterface_tb File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file adcinterface.sv
-    Info (12023): Found entity 1: adcinterface File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 1
+    Info (12023): Found entity 1: adcinterface File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 6
 Info (12127): Elaborating entity "lab4" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at lab4.sv(23): object "onOff" assigned a value but never read File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 23
 Info (12128): Elaborating entity "decode2" for hierarchy "decode2:decode2_0" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 30
@@ -384,11 +384,11 @@ Warning (10230): Verilog HDL assignment warning at enc2chan.sv(30): truncated va
 Warning (10230): Verilog HDL assignment warning at enc2chan.sv(42): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/enc2chan.sv Line: 42
 Warning (10958): SystemVerilog warning at enc2chan.sv(58): unique or priority keyword makes case statement complete File: C:/SHAMM/github repos/ELEX-7660/Lab4/enc2chan.sv Line: 58
 Info (12128): Elaborating entity "adcinterface" for hierarchy "adcinterface:adcinterface_1" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at adcinterface.sv(46): truncated value with size 32 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at adcinterface.sv(57): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 57
-Warning (10230): Verilog HDL assignment warning at adcinterface.sv(76): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 76
-Warning (10230): Verilog HDL assignment warning at adcinterface.sv(120): truncated value with size 32 to match size of target (1) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 120
-Warning (10230): Verilog HDL assignment warning at adcinterface.sv(136): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 136
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(51): truncated value with size 32 to match size of target (4) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(62): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(81): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(125): truncated value with size 32 to match size of target (1) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 125
+Warning (10230): Verilog HDL assignment warning at adcinterface.sv(141): truncated value with size 32 to match size of target (3) File: C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv Line: 141
 Info (13014): Ignored 2 buffer(s)
     Info (13019): Ignored 2 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
@@ -398,17 +398,15 @@ Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/SHAMM/github repos/ELEX-7660/Lab4/output_files/lab4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "s2" File: C:/SHAMM/github repos/ELEX-7660/Lab4/lab4.sv Line: 11
-Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 119 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Tue Feb 11 01:39:09 2025
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Wed Feb 12 10:42:27 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+

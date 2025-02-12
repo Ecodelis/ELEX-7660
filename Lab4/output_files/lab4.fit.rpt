@@ -1,5 +1,5 @@
 Fitter report for lab4
-Tue Feb 11 01:39:39 2025
+Wed Feb 12 10:42:56 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Feb 11 01:39:39 2025       ;
+; Fitter Status                   ; Successful - Wed Feb 12 10:42:56 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab4                                        ;
 ; Top-level Entity Name           ; lab4                                        ;
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 57 / 15,880 ( < 1 % )                       ;
 ; Total registers                 ; 88                                          ;
-; Total pins                      ; 21 / 314 ( 7 % )                            ;
+; Total pins                      ; 20 / 314 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 2,764,800 ( 0 % )                       ;
 ; Total RAM Blocks                ; 0 / 270 ( 0 % )                             ;
@@ -158,9 +158,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
-;     Processor 3            ;   0.8%      ;
-;     Processor 4            ;   0.8%      ;
+;     Processor 2            ;   1.1%      ;
+;     Processor 3            ;   0.9%      ;
+;     Processor 4            ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -171,12 +171,12 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------+------------------+-----------------------+
 ; CLOCK_50~inputCLKENA0                      ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                      ;                  ;                       ;
 ; adcinterface:adcinterface_1|temp_result[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[1]~DUPLICATE ;                  ;                       ;
-; adcinterface:adcinterface_1|temp_result[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[4]~DUPLICATE ;                  ;                       ;
-; adcinterface:adcinterface_1|temp_result[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[5]~DUPLICATE ;                  ;                       ;
-; adcinterface:adcinterface_1|temp_result[9] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[9]~DUPLICATE ;                  ;                       ;
+; adcinterface:adcinterface_1|temp_result[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[2]~DUPLICATE ;                  ;                       ;
+; adcinterface:adcinterface_1|temp_result[6] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[6]~DUPLICATE ;                  ;                       ;
+; adcinterface:adcinterface_1|temp_result[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; adcinterface:adcinterface_1|temp_result[7]~DUPLICATE ;                  ;                       ;
 ; enc2chan:enc2chan_1|bcd_count[0]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; enc2chan:enc2chan_1|bcd_count[0]~DUPLICATE           ;                  ;                       ;
-; enc2chan:enc2chan_1|bcd_count[1]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; enc2chan:enc2chan_1|bcd_count[1]~DUPLICATE           ;                  ;                       ;
-; enc2chan:enc2chan_1|bcd_count[2]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; enc2chan:enc2chan_1|bcd_count[2]~DUPLICATE           ;                  ;                       ;
+; enc2chan:enc2chan_1|ccw_pulse_count[0]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; enc2chan:enc2chan_1|ccw_pulse_count[0]~DUPLICATE     ;                  ;                       ;
+; enc2chan:enc2chan_1|cw_pulse_count[0]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; enc2chan:enc2chan_1|cw_pulse_count[0]~DUPLICATE      ;                  ;                       ;
 +--------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------+------------------+-----------------------+
 
 
@@ -304,6 +304,7 @@ refer to the applicable agreement for further details.
 ; Location ;                ;              ; lcd_sda         ; PIN_AA15      ; QSF Assignment ;
 ; Location ;                ;              ; point           ; PIN_AF11      ; QSF Assignment ;
 ; Location ;                ;              ; red             ; PIN_AG19      ; QSF Assignment ;
+; Location ;                ;              ; s2              ; PIN_AE19      ; QSF Assignment ;
 ; Location ;                ;              ; spkr            ; PIN_AF21      ; QSF Assignment ;
 +----------+----------------+--------------+-----------------+---------------+----------------+
 
@@ -314,8 +315,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 214 ) ; 0.00 % ( 0 / 214 )         ; 0.00 % ( 0 / 214 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 214 ) ; 0.00 % ( 0 / 214 )         ; 0.00 % ( 0 / 214 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 212 ) ; 0.00 % ( 0 / 212 )         ; 0.00 % ( 0 / 212 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 212 ) ; 0.00 % ( 0 / 212 )         ; 0.00 % ( 0 / 212 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -338,7 +339,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 214 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 212 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -356,12 +357,12 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 57 / 15,880        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 57                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 66 / 15,880        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 23                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 25                 ;       ;
-;         [c] ALMs used for registers                         ; 18                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 63 / 15,880        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 28                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 22                 ;       ;
+;         [c] ALMs used for registers                         ; 13                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 15,880         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 15,880         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 15,880         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -370,28 +371,28 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 10 / 1,588         ; < 1 % ;
-;     -- Logic LABs                                           ; 10                 ;       ;
+; Total LABs:  partially or completely used                   ; 9 / 1,588          ; < 1 % ;
+;     -- Logic LABs                                           ; 9                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 90                 ;       ;
 ;     -- 7 input functions                                    ; 1                  ;       ;
 ;     -- 6 input functions                                    ; 26                 ;       ;
 ;     -- 5 input functions                                    ; 12                 ;       ;
-;     -- 4 input functions                                    ; 16                 ;       ;
-;     -- <=3 input functions                                  ; 35                 ;       ;
+;     -- 4 input functions                                    ; 15                 ;       ;
+;     -- <=3 input functions                                  ; 36                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 3                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 88                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 81 / 31,760        ; < 1 % ;
-;         -- Secondary logic registers                        ; 7 / 31,760         ; < 1 % ;
+;         -- Primary logic registers                          ; 80 / 31,760        ; < 1 % ;
+;         -- Secondary logic registers                        ; 8 / 31,760         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 81                 ;       ;
 ;         -- Routing optimization registers                   ; 7                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 21 / 314           ; 7 %   ;
+; I/O pins                                                    ; 20 / 314           ; 6 %   ;
 ;     -- Clock pins                                           ; 1 / 6              ; 17 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 21             ; 0 %   ;
 ;                                                             ;                    ;       ;
@@ -443,12 +444,12 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.3% / 0.3% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 2.6% / 2.9% / 1.7% ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.3% / 0.3% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 2.5% / 2.8% / 1.4% ;       ;
 ; Maximum fan-out                                             ; 55                 ;       ;
 ; Highest non-global fan-out                                  ; 55                 ;       ;
 ; Total fan-out                                               ; 608                ;       ;
-; Average fan-out                                             ; 2.71               ;       ;
+; Average fan-out                                             ; 2.74               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -459,12 +460,12 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 57 / 15880 ( < 1 % ) ; 0 / 15880 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 57                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 66 / 15880 ( < 1 % ) ; 0 / 15880 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 23                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 25                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 18                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 63 / 15880 ( < 1 % ) ; 0 / 15880 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 28                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 22                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 13                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 15880 ( 0 % )    ; 0 / 15880 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -473,16 +474,16 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 10 / 1588 ( < 1 % )  ; 0 / 1588 ( 0 % )               ;
-;     -- Logic LABs                                           ; 10                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 9 / 1588 ( < 1 % )   ; 0 / 1588 ( 0 % )               ;
+;     -- Logic LABs                                           ; 9                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 90                   ; 0                              ;
 ;     -- 7 input functions                                    ; 1                    ; 0                              ;
 ;     -- 6 input functions                                    ; 26                   ; 0                              ;
 ;     -- 5 input functions                                    ; 12                   ; 0                              ;
-;     -- 4 input functions                                    ; 16                   ; 0                              ;
-;     -- <=3 input functions                                  ; 35                   ; 0                              ;
+;     -- 4 input functions                                    ; 15                   ; 0                              ;
+;     -- <=3 input functions                                  ; 36                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 3                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
@@ -490,15 +491,15 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 81 / 31760 ( < 1 % ) ; 0 / 31760 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 7 / 31760 ( < 1 % )  ; 0 / 31760 ( 0 % )              ;
+;         -- Primary logic registers                          ; 80 / 31760 ( < 1 % ) ; 0 / 31760 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 8 / 31760 ( < 1 % )  ; 0 / 31760 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 81                   ; 0                              ;
 ;         -- Routing optimization registers                   ; 7                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
-; I/O pins                                                    ; 21                   ; 0                              ;
+; I/O pins                                                    ; 20                   ; 0                              ;
 ; I/O registers                                               ; 0                    ; 0                              ;
 ; Total block memory bits                                     ; 0                    ; 0                              ;
 ; Total block memory implementation bits                      ; 0                    ; 0                              ;
@@ -512,14 +513,14 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
 ;     -- Total Connections                                    ; 608                  ; 0                              ;
-;     -- Registered Connections                               ; 380                  ; 0                              ;
+;     -- Registered Connections                               ; 379                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst                       ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Partition Interface                                         ;                      ;                                ;
-;     -- Input Ports                                          ; 6                    ; 0                              ;
+;     -- Input Ports                                          ; 5                    ; 0                              ;
 ;     -- Output Ports                                         ; 15                   ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
@@ -549,7 +550,6 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ; enc1_a   ; AC22  ; 4A       ; 64           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; enc1_b   ; AE23  ; 4A       ; 62           ; 0            ; 57           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; On           ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; s1       ; AH23  ; 4A       ; 59           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; s2       ; AE19  ; 4A       ; 48           ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -584,7 +584,7 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
 ; 3A       ; 4 / 16 ( 25 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 1 / 32 ( 3 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 16 / 68 ( 24 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 15 / 68 ( 22 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -727,7 +727,7 @@ The pin-out file can be found in C:/SHAMM/github repos/ELEX-7660/Lab4/output_fil
 ; AE16     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE17     ; 111        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE18     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AE19     ; 121        ; 4A             ; s2                              ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AE19     ; 121        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE20     ; 129        ; 4A             ; leds[4]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AE21     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE22     ; 138        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1282,7 +1282,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------+-------------------------------+
 ; Pin Name   ; Reason                        ;
 +------------+-------------------------------+
-; s2         ; Incomplete set of assignments ;
 ; ADC_CONVST ; Incomplete set of assignments ;
 ; ADC_SCK    ; Incomplete set of assignments ;
 ; ADC_SDI    ; Incomplete set of assignments ;
@@ -1311,12 +1310,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node       ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name  ; Library Name ;
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------+--------------+--------------+
-; |lab4                            ; 56.5 (12.7)          ; 65.5 (14.7)                      ; 9.0 (2.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 90 (21)             ; 88 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 21   ; 0            ; |lab4                             ; lab4         ; work         ;
-;    |adcinterface:adcinterface_1| ; 31.0 (31.0)          ; 36.5 (36.5)                      ; 5.5 (5.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 45 (45)             ; 45 (45)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|adcinterface:adcinterface_1 ; adcinterface ; work         ;
-;    |decode2:decode2_0|           ; 1.3 (1.3)            ; 1.7 (1.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|decode2:decode2_0           ; decode2      ; work         ;
-;    |decode7:decode7_0|           ; 2.7 (2.7)            ; 2.7 (2.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|decode7:decode7_0           ; decode7      ; work         ;
-;    |enc2chan:enc2chan_1|         ; 6.7 (6.7)            ; 8.2 (8.2)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|enc2chan:enc2chan_1         ; enc2chan     ; work         ;
-;    |encoder:encoder_1|           ; 1.5 (1.5)            ; 1.8 (1.8)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|encoder:encoder_1           ; encoder      ; work         ;
+; |lab4                            ; 56.5 (13.5)          ; 62.0 (14.6)                      ; 5.5 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 90 (21)             ; 88 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 20   ; 0            ; |lab4                             ; lab4         ; work         ;
+;    |adcinterface:adcinterface_1| ; 31.2 (31.2)          ; 34.3 (34.3)                      ; 3.1 (3.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 45 (45)             ; 45 (45)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|adcinterface:adcinterface_1 ; adcinterface ; work         ;
+;    |decode2:decode2_0|           ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|decode2:decode2_0           ; decode2      ; work         ;
+;    |decode7:decode7_0|           ; 3.1 (3.1)            ; 3.1 (3.1)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|decode7:decode7_0           ; decode7      ; work         ;
+;    |enc2chan:enc2chan_1|         ; 5.7 (5.7)            ; 7.1 (7.1)                        ; 1.4 (1.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|enc2chan:enc2chan_1         ; enc2chan     ; work         ;
+;    |encoder:encoder_1|           ; 1.5 (1.5)            ; 2.0 (2.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lab4|encoder:encoder_1           ; encoder      ; work         ;
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-----------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1326,7 +1325,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 ; Name       ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
-; s2         ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ADC_CONVST ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; ADC_SCK    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; ADC_SDI    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
@@ -1344,8 +1342,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ct[3]      ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; CLOCK_50   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; s1         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; enc1_a     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; enc1_b     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; enc1_a     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; enc1_b     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ADC_SDO    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1355,19 +1353,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                               ; Pad To Core Index ; Setting ;
 +---------------------------------------------------+-------------------+---------+
-; s2                                                ;                   ;         ;
 ; CLOCK_50                                          ;                   ;         ;
 ;      - clk_div_count[15]                          ; 0                 ; 0       ;
 ; s1                                                ;                   ;         ;
 ;      - reset_n                                    ; 0                 ; 0       ;
 ; enc1_a                                            ;                   ;         ;
-;      - encoder:encoder_1|a_prev                   ; 0                 ; 0       ;
-;      - encoder:encoder_1|ccw~0                    ; 0                 ; 0       ;
-;      - encoder:encoder_1|always0~0                ; 0                 ; 0       ;
+;      - encoder:encoder_1|a_prev                   ; 1                 ; 0       ;
+;      - encoder:encoder_1|ccw~0                    ; 1                 ; 0       ;
+;      - encoder:encoder_1|always0~0                ; 1                 ; 0       ;
 ; enc1_b                                            ;                   ;         ;
-;      - encoder:encoder_1|b_prev                   ; 0                 ; 0       ;
-;      - encoder:encoder_1|ccw~0                    ; 0                 ; 0       ;
-;      - encoder:encoder_1|always0~0                ; 0                 ; 0       ;
+;      - encoder:encoder_1|b_prev                   ; 1                 ; 0       ;
+;      - encoder:encoder_1|ccw~0                    ; 1                 ; 0       ;
+;      - encoder:encoder_1|always0~0                ; 1                 ; 0       ;
 ; ADC_SDO                                           ;                   ;         ;
 ;      - adcinterface:adcinterface_1|temp_result[0] ; 1                 ; 0       ;
 +---------------------------------------------------+-------------------+---------+
@@ -1380,13 +1377,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                        ; PIN_V11            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                        ; PIN_V11            ; 42      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; adcinterface:adcinterface_1|state.DATA_TRANSFER ; FF_X54_Y3_N47      ; 22      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; adcinterface:adcinterface_1|state.LOW_CONV      ; FF_X54_Y3_N14      ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; adcinterface:adcinterface_1|state~13            ; LABCELL_X54_Y3_N21 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk_div_count[15]                               ; FF_X56_Y2_N44      ; 55      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; enc2chan:enc2chan_1|ccw_pulse_count[0]~1        ; LABCELL_X56_Y3_N24 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; enc2chan:enc2chan_1|cw_pulse_count[2]~1         ; LABCELL_X56_Y3_N54 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; reset_n                                         ; FF_X54_Y2_N47      ; 37      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; adcinterface:adcinterface_1|state.DATA_TRANSFER ; FF_X48_Y2_N47      ; 22      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; adcinterface:adcinterface_1|state.LOW_CONV      ; FF_X48_Y2_N2       ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; adcinterface:adcinterface_1|state~13            ; LABCELL_X48_Y2_N39 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk_div_count[15]                               ; FF_X47_Y3_N44      ; 55      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; enc2chan:enc2chan_1|ccw_pulse_count[0]~1        ; LABCELL_X45_Y2_N30 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; enc2chan:enc2chan_1|cw_pulse_count[2]~1         ; LABCELL_X46_Y2_N3  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; reset_n                                         ; FF_X46_Y2_N44      ; 37      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1404,14 +1401,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 217 / 130,276 ( < 1 % ) ;
+; Block interconnects                         ; 223 / 130,276 ( < 1 % ) ;
 ; C12 interconnects                           ; 5 / 6,848 ( < 1 % )     ;
-; C2 interconnects                            ; 87 / 51,436 ( < 1 % )   ;
-; C4 interconnects                            ; 44 / 25,120 ( < 1 % )   ;
+; C2 interconnects                            ; 84 / 51,436 ( < 1 % )   ;
+; C4 interconnects                            ; 49 / 25,120 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 19 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 19 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 19 ( 0 % )          ;
-; Direct links                                ; 33 / 130,276 ( < 1 % )  ;
+; Direct links                                ; 27 / 130,276 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1467,12 +1464,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 12 ( 0 % )          ;
-; Local interconnects                         ; 53 / 31,760 ( < 1 % )   ;
+; Local interconnects                         ; 54 / 31,760 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 72 ( 0 % )          ;
-; R14 interconnects                           ; 67 / 6,046 ( 1 % )      ;
-; R14/C12 interconnect drivers                ; 69 / 8,584 ( < 1 % )    ;
-; R3 interconnects                            ; 166 / 56,712 ( < 1 % )  ;
-; R6 interconnects                            ; 166 / 131,000 ( < 1 % ) ;
+; R14 interconnects                           ; 75 / 6,046 ( 1 % )      ;
+; R14/C12 interconnect drivers                ; 78 / 8,584 ( < 1 % )    ;
+; R3 interconnects                            ; 148 / 56,712 ( < 1 % )  ;
+; R6 interconnects                            ; 169 / 131,000 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 150 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 6,650 ( 0 % )       ;
 +---------------------------------------------+-------------------------+
@@ -1533,11 +1530,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 21        ; 0            ; 21        ; 0            ; 0            ; 21        ; 21        ; 0            ; 21        ; 21        ; 0            ; 15           ; 0            ; 2            ; 0            ; 0            ; 15           ; 0            ; 2            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 20        ; 0            ; 20        ; 0            ; 0            ; 20        ; 20        ; 0            ; 20        ; 20        ; 0            ; 15           ; 0            ; 2            ; 0            ; 0            ; 15           ; 0            ; 2            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 21           ; 0         ; 21           ; 21           ; 0         ; 0         ; 21           ; 0         ; 0         ; 21           ; 6            ; 21           ; 19           ; 21           ; 21           ; 6            ; 21           ; 19           ; 21           ; 21           ; 6            ; 21           ; 21           ; 21           ; 21           ; 21           ; 21           ;
+; Total Inapplicable ; 0         ; 20           ; 0         ; 20           ; 20           ; 0         ; 0         ; 20           ; 0         ; 0         ; 20           ; 5            ; 20           ; 18           ; 20           ; 20           ; 5            ; 20           ; 18           ; 20           ; 20           ; 5            ; 20           ; 20           ; 20           ; 20           ; 20           ; 20           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; s2                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ADC_CONVST         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ADC_SCK            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ADC_SDI            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1609,9 +1605,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+----------------------+-------------------+
 ; Source Clock(s)   ; Destination Clock(s) ; Delay Added in ns ;
 +-------------------+----------------------+-------------------+
-; clk_div_count[15] ; clk_div_count[15]    ; 46.2              ;
-; clk_div_count[15] ; CLOCK_50             ; 36.2              ;
-; CLOCK_50          ; CLOCK_50             ; 16.7              ;
+; clk_div_count[15] ; clk_div_count[15]    ; 56.5              ;
+; clk_div_count[15] ; CLOCK_50             ; 31.7              ;
+; CLOCK_50          ; CLOCK_50             ; 15.0              ;
 +-------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1622,77 +1618,70 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------+-------------------------------------------------+-------------------+
 ; Source Register                                 ; Destination Register                            ; Delay Added in ns ;
 +-------------------------------------------------+-------------------------------------------------+-------------------+
-; clk_div_count[15]                               ; clk_div_count[15]                               ; 4.822             ;
-; adcinterface:adcinterface_1|result[2]           ; led_result[2]                                   ; 3.220             ;
-; adcinterface:adcinterface_1|result[3]           ; led_result[3]                                   ; 3.219             ;
-; adcinterface:adcinterface_1|result[9]           ; led_result[9]                                   ; 3.162             ;
-; adcinterface:adcinterface_1|result[7]           ; led_result[7]                                   ; 3.139             ;
-; adcinterface:adcinterface_1|result[4]           ; led_result[4]                                   ; 3.112             ;
-; adcinterface:adcinterface_1|result[5]           ; led_result[5]                                   ; 3.111             ;
-; adcinterface:adcinterface_1|result[1]           ; led_result[1]                                   ; 3.108             ;
-; adcinterface:adcinterface_1|result[8]           ; led_result[8]                                   ; 3.075             ;
-; adcinterface:adcinterface_1|result[0]           ; led_result[0]                                   ; 2.962             ;
-; adcinterface:adcinterface_1|result[6]           ; led_result[6]                                   ; 2.788             ;
-; adcinterface:adcinterface_1|result[10]          ; led_result[10]                                  ; 2.734             ;
-; adcinterface:adcinterface_1|result[11]          ; led_result[11]                                  ; 2.567             ;
-; clk_div_count[14]                               ; clk_div_count[14]                               ; 1.115             ;
-; clk_div_count[13]                               ; clk_div_count[14]                               ; 1.060             ;
-; adcinterface:adcinterface_1|shift_count[0]      ; adcinterface:adcinterface_1|ADC_SDI             ; 1.015             ;
-; adcinterface:adcinterface_1|shift_count[1]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.994             ;
-; adcinterface:adcinterface_1|temp_result[2]      ; adcinterface:adcinterface_1|result[3]           ; 0.930             ;
-; adcinterface:adcinterface_1|state.INIT_CONV     ; adcinterface:adcinterface_1|state.LOW_CONV      ; 0.909             ;
-; adcinterface:adcinterface_1|temp_result[3]      ; adcinterface:adcinterface_1|result[3]           ; 0.898             ;
-; adcinterface:adcinterface_1|state.LOW_CONV      ; adcinterface:adcinterface_1|state.DATA_TRANSFER ; 0.878             ;
-; adcinterface:adcinterface_1|state.PAUSE_SCK     ; adcinterface:adcinterface_1|state.INIT_CONV     ; 0.871             ;
-; adcinterface:adcinterface_1|state.DATA_TRANSFER ; adcinterface:adcinterface_1|state.PAUSE_SCK     ; 0.866             ;
-; clk_div_count[10]                               ; clk_div_count[14]                               ; 0.862             ;
-; adcinterface:adcinterface_1|temp_result[1]      ; adcinterface:adcinterface_1|result[2]           ; 0.823             ;
-; clk_div_count[11]                               ; clk_div_count[14]                               ; 0.822             ;
-; clk_div_count[12]                               ; clk_div_count[14]                               ; 0.818             ;
-; adcinterface:adcinterface_1|shift_count[2]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.816             ;
-; clk_div_count[9]                                ; clk_div_count[14]                               ; 0.795             ;
-; adcinterface:adcinterface_1|temp_result[9]      ; adcinterface:adcinterface_1|result[9]           ; 0.781             ;
-; adcinterface:adcinterface_1|temp_result[10]     ; adcinterface:adcinterface_1|result[10]          ; 0.769             ;
-; clk_div_count[8]                                ; clk_div_count[14]                               ; 0.750             ;
-; adcinterface:adcinterface_1|temp_result[0]      ; adcinterface:adcinterface_1|result[2]           ; 0.688             ;
-; clk_div_count[7]                                ; clk_div_count[14]                               ; 0.664             ;
-; clk_div_count[0]                                ; clk_div_count[14]                               ; 0.652             ;
-; adcinterface:adcinterface_1|temp_result[7]      ; adcinterface:adcinterface_1|temp_result[8]      ; 0.621             ;
-; clk_div_count[6]                                ; clk_div_count[14]                               ; 0.610             ;
-; adcinterface:adcinterface_1|temp_result[6]      ; adcinterface:adcinterface_1|result[2]           ; 0.601             ;
-; adcinterface:adcinterface_1|delay[3]            ; adcinterface:adcinterface_1|delay[2]            ; 0.592             ;
-; adcinterface:adcinterface_1|temp_result[4]      ; adcinterface:adcinterface_1|temp_result[5]      ; 0.591             ;
-; adcinterface:adcinterface_1|temp_result[8]      ; adcinterface:adcinterface_1|result[2]           ; 0.578             ;
-; adcinterface:adcinterface_1|delay[0]            ; adcinterface:adcinterface_1|delay[2]            ; 0.571             ;
-; adcinterface:adcinterface_1|temp_result[5]      ; adcinterface:adcinterface_1|temp_result[6]      ; 0.565             ;
-; adcinterface:adcinterface_1|temp_result[11]     ; adcinterface:adcinterface_1|result[9]           ; 0.541             ;
-; adcinterface:adcinterface_1|delay[1]            ; adcinterface:adcinterface_1|delay[2]            ; 0.484             ;
-; adcinterface:adcinterface_1|delay[2]            ; adcinterface:adcinterface_1|delay[3]            ; 0.482             ;
-; clk_div_count[4]                                ; clk_div_count[14]                               ; 0.478             ;
-; reset_n                                         ; adcinterface:adcinterface_1|result[9]           ; 0.392             ;
-; encoder:encoder_1|a_prev                        ; encoder:encoder_1|cw                            ; 0.387             ;
-; clk_div_count[2]                                ; clk_div_count[14]                               ; 0.363             ;
-; clk_div_count[5]                                ; clk_div_count[14]                               ; 0.357             ;
-; enc2chan:enc2chan_1|cw_pulse_count[0]           ; enc2chan:enc2chan_1|cw_pulse_count[1]           ; 0.339             ;
-; adcinterface:adcinterface_1|ADC_SDI             ; adcinterface:adcinterface_1|ADC_SDI             ; 0.339             ;
-; enc2chan:enc2chan_1|ccw_pulse_count[0]          ; enc2chan:enc2chan_1|ccw_pulse_count[1]          ; 0.331             ;
-; clk_div_count[3]                                ; clk_div_count[14]                               ; 0.323             ;
-; clk_div_count[1]                                ; clk_div_count[14]                               ; 0.298             ;
-; adcinterface:adcinterface_1|config_word[2]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.282             ;
-; adcinterface:adcinterface_1|config_word[3]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.282             ;
-; encoder:encoder_1|b_prev                        ; encoder:encoder_1|ccw                           ; 0.249             ;
-; enc2chan:enc2chan_1|bcd_count[0]                ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.080             ;
-; enc2chan:enc2chan_1|bcd_count[1]                ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.067             ;
-; encoder:encoder_1|ccw                           ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.067             ;
-; enc2chan:enc2chan_1|ccw_pulse_count[1]          ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.067             ;
-; encoder:encoder_1|cw                            ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.067             ;
-; enc2chan:enc2chan_1|cw_pulse_count[1]           ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.067             ;
-; enc2chan:enc2chan_1|bcd_count[2]                ; enc2chan:enc2chan_1|bcd_count[0]                ; 0.067             ;
-; adcinterface:adcinterface_1|ADC_CONVST          ; adcinterface:adcinterface_1|ADC_CONVST          ; 0.057             ;
-; adcinterface:adcinterface_1|enable_sck          ; adcinterface:adcinterface_1|enable_sck          ; 0.050             ;
-; adcinterface:adcinterface_1|config_word[4]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.021             ;
+; clk_div_count[15]                               ; clk_div_count[15]                               ; 4.581             ;
+; adcinterface:adcinterface_1|result[5]           ; led_result[5]                                   ; 2.883             ;
+; adcinterface:adcinterface_1|result[8]           ; led_result[8]                                   ; 2.828             ;
+; adcinterface:adcinterface_1|result[9]           ; led_result[9]                                   ; 2.746             ;
+; adcinterface:adcinterface_1|result[3]           ; led_result[3]                                   ; 2.733             ;
+; adcinterface:adcinterface_1|result[7]           ; led_result[7]                                   ; 2.726             ;
+; adcinterface:adcinterface_1|result[6]           ; led_result[6]                                   ; 2.600             ;
+; adcinterface:adcinterface_1|result[11]          ; led_result[11]                                  ; 2.586             ;
+; adcinterface:adcinterface_1|result[4]           ; led_result[4]                                   ; 2.580             ;
+; adcinterface:adcinterface_1|result[1]           ; led_result[1]                                   ; 2.578             ;
+; adcinterface:adcinterface_1|result[0]           ; led_result[0]                                   ; 2.576             ;
+; adcinterface:adcinterface_1|result[2]           ; led_result[2]                                   ; 2.503             ;
+; adcinterface:adcinterface_1|result[10]          ; led_result[10]                                  ; 2.348             ;
+; adcinterface:adcinterface_1|shift_count[0]      ; adcinterface:adcinterface_1|ADC_SDI             ; 1.026             ;
+; adcinterface:adcinterface_1|temp_result[0]      ; adcinterface:adcinterface_1|result[8]           ; 1.024             ;
+; adcinterface:adcinterface_1|temp_result[9]      ; adcinterface:adcinterface_1|result[8]           ; 1.021             ;
+; adcinterface:adcinterface_1|shift_count[1]      ; adcinterface:adcinterface_1|ADC_SDI             ; 1.008             ;
+; adcinterface:adcinterface_1|temp_result[6]      ; adcinterface:adcinterface_1|result[3]           ; 1.007             ;
+; adcinterface:adcinterface_1|temp_result[2]      ; adcinterface:adcinterface_1|result[3]           ; 1.004             ;
+; adcinterface:adcinterface_1|temp_result[1]      ; adcinterface:adcinterface_1|result[2]           ; 0.999             ;
+; adcinterface:adcinterface_1|temp_result[8]      ; adcinterface:adcinterface_1|result[8]           ; 0.988             ;
+; adcinterface:adcinterface_1|temp_result[3]      ; adcinterface:adcinterface_1|result[3]           ; 0.971             ;
+; clk_div_count[14]                               ; clk_div_count[14]                               ; 0.943             ;
+; adcinterface:adcinterface_1|state.LOW_CONV      ; adcinterface:adcinterface_1|state.DATA_TRANSFER ; 0.891             ;
+; clk_div_count[13]                               ; clk_div_count[14]                               ; 0.888             ;
+; adcinterface:adcinterface_1|state.PAUSE_SCK     ; adcinterface:adcinterface_1|result[2]           ; 0.883             ;
+; adcinterface:adcinterface_1|state.DATA_TRANSFER ; adcinterface:adcinterface_1|state.PAUSE_SCK     ; 0.874             ;
+; adcinterface:adcinterface_1|temp_result[10]     ; adcinterface:adcinterface_1|result[10]          ; 0.834             ;
+; adcinterface:adcinterface_1|shift_count[2]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.821             ;
+; adcinterface:adcinterface_1|temp_result[7]      ; adcinterface:adcinterface_1|result[8]           ; 0.747             ;
+; clk_div_count[10]                               ; clk_div_count[14]                               ; 0.719             ;
+; clk_div_count[9]                                ; clk_div_count[14]                               ; 0.652             ;
+; clk_div_count[12]                               ; clk_div_count[14]                               ; 0.641             ;
+; adcinterface:adcinterface_1|temp_result[4]      ; adcinterface:adcinterface_1|result[3]           ; 0.637             ;
+; clk_div_count[11]                               ; clk_div_count[14]                               ; 0.605             ;
+; adcinterface:adcinterface_1|temp_result[5]      ; adcinterface:adcinterface_1|result[5]           ; 0.602             ;
+; clk_div_count[8]                                ; clk_div_count[14]                               ; 0.602             ;
+; adcinterface:adcinterface_1|temp_result[11]     ; adcinterface:adcinterface_1|result[10]          ; 0.535             ;
+; adcinterface:adcinterface_1|state.INIT_CONV     ; adcinterface:adcinterface_1|ADC_CONVST          ; 0.531             ;
+; adcinterface:adcinterface_1|delay[2]            ; adcinterface:adcinterface_1|delay[1]            ; 0.525             ;
+; clk_div_count[7]                                ; clk_div_count[14]                               ; 0.521             ;
+; clk_div_count[0]                                ; clk_div_count[14]                               ; 0.506             ;
+; adcinterface:adcinterface_1|delay[3]            ; adcinterface:adcinterface_1|delay[1]            ; 0.489             ;
+; clk_div_count[6]                                ; clk_div_count[14]                               ; 0.466             ;
+; adcinterface:adcinterface_1|delay[1]            ; adcinterface:adcinterface_1|state.LOW_CONV      ; 0.457             ;
+; encoder:encoder_1|a_prev                        ; encoder:encoder_1|cw                            ; 0.381             ;
+; adcinterface:adcinterface_1|ADC_SDI             ; adcinterface:adcinterface_1|ADC_SDI             ; 0.351             ;
+; clk_div_count[4]                                ; clk_div_count[14]                               ; 0.335             ;
+; encoder:encoder_1|b_prev                        ; encoder:encoder_1|cw                            ; 0.334             ;
+; enc2chan:enc2chan_1|ccw_pulse_count[0]          ; enc2chan:enc2chan_1|ccw_pulse_count[1]          ; 0.312             ;
+; enc2chan:enc2chan_1|cw_pulse_count[0]           ; enc2chan:enc2chan_1|cw_pulse_count[1]           ; 0.312             ;
+; reset_n                                         ; adcinterface:adcinterface_1|result[2]           ; 0.289             ;
+; adcinterface:adcinterface_1|config_word[4]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.232             ;
+; clk_div_count[2]                                ; clk_div_count[14]                               ; 0.222             ;
+; clk_div_count[5]                                ; clk_div_count[14]                               ; 0.213             ;
+; adcinterface:adcinterface_1|enable_sck          ; adcinterface:adcinterface_1|enable_sck          ; 0.187             ;
+; adcinterface:adcinterface_1|ADC_CONVST          ; adcinterface:adcinterface_1|ADC_CONVST          ; 0.171             ;
+; clk_div_count[1]                                ; clk_div_count[14]                               ; 0.156             ;
+; clk_div_count[3]                                ; clk_div_count[14]                               ; 0.139             ;
+; adcinterface:adcinterface_1|config_word[2]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.124             ;
+; adcinterface:adcinterface_1|config_word[3]      ; adcinterface:adcinterface_1|ADC_SDI             ; 0.124             ;
+; adcinterface:adcinterface_1|delay[0]            ; adcinterface:adcinterface_1|delay[3]            ; 0.118             ;
 +-------------------------------------------------+-------------------------------------------------+-------------------+
-Note: This table only shows the top 69 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 62 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1838,21 +1827,22 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "lcd_sda" is assigned to location or region, but does not exist in design
     Warning (15706): Node "point" is assigned to location or region, but does not exist in design
     Warning (15706): Node "red" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "s2" is assigned to location or region, but does not exist in design
     Warning (15706): Node "spkr" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X46_Y0 to location X56_Y11
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X46_Y0 to location X56_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 0.68 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.63 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1860,11 +1850,11 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/SHAMM/github repos/ELEX-7660/Lab4/output_files/lab4.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 126 warnings
-    Info: Peak virtual memory: 6270 megabytes
-    Info: Processing ended: Tue Feb 11 01:39:40 2025
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Fitter was successful. 0 errors, 127 warnings
+    Info: Peak virtual memory: 6292 megabytes
+    Info: Processing ended: Wed Feb 12 10:42:57 2025
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +----------------------------+

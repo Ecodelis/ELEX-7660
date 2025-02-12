@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "quarter",
+					"strict" : false
+				},
+				{
+					"name" : "dime",
+					"strict" : false
+				},
+				{
+					"name" : "nickel",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

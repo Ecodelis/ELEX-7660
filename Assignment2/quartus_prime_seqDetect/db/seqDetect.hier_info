@@ -1,0 +1,33 @@
+|seqDetect
+valid <= valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => seq_temp.DATAB
+seq[0] => Equal1.IN5
+seq[1] => Equal1.IN4
+seq[2] => Equal1.IN3
+seq[3] => Equal1.IN2
+seq[4] => Equal1.IN1
+seq[5] => Equal1.IN0
+clk => seq_temp[0].CLK
+clk => seq_temp[1].CLK
+clk => seq_temp[2].CLK
+clk => seq_temp[3].CLK
+clk => seq_temp[4].CLK
+clk => seq_temp[5].CLK
+clk => valid~reg0.CLK
+clk => wait_count[0].CLK
+clk => wait_count[1].CLK
+clk => wait_count[2].CLK
+clk => state~4.DATAIN
+reset_n => seq_temp[0].ACLR
+reset_n => seq_temp[1].ACLR
+reset_n => seq_temp[2].ACLR
+reset_n => seq_temp[3].ACLR
+reset_n => seq_temp[4].ACLR
+reset_n => seq_temp[5].ACLR
+reset_n => valid~reg0.ACLR
+reset_n => wait_count[0].ACLR
+reset_n => wait_count[1].ACLR
+reset_n => wait_count[2].ACLR
+reset_n => state~6.DATAIN
+
+

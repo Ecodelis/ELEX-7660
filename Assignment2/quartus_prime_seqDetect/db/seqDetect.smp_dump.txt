@@ -1,0 +1,6 @@
+
+State Machine - |seqDetect|state
+Name state.DETECT state.IDLE state.EQUAL 
+state.DETECT 0 0 0 
+state.EQUAL 1 0 1 
+state.IDLE 1 1 0 

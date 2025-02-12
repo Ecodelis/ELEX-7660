@@ -7,9 +7,9 @@
 
 module lab4 ( input logic CLOCK_50,       				// 50 MHz clock
 			(* altera_attribute = "-name WEAK_PULL_UP_RESISTOR ON" *) input logic 
-			enc1_a, enc1_b, 				// Encoder 1 pins
-            input logic s1, s2,         				// pushbuttons
-			input logic ADC_SDO,         				// ADC serial data output
+			enc1_a, enc1_b, 										// Encoder 1 pins
+            input logic s1,         						// pushbuttons
+			input logic ADC_SDO,         						// ADC serial data output
 			output logic ADC_CONVST, ADC_SCK, ADC_SDI, 	// ADC control signals
 
             output logic [7:0] leds,    				// 7-seg LED enables

@@ -10,49 +10,49 @@ cModel Technology
 dC:/Software/Quartus_18-1
 vadcinterface
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1739266736
+Z1 !s110 1739385265
 !i10b 1
-!s100 1JF3gB`LNz7]8G_;0=eh?3
-I`2AIknHnG_nzS28iDhAZ`3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 Q:QQDBB:5]@nK3CLn>lhB0
+IOE?WidH44lD0bH8hSnR3G1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 adcinterface_sv_unit
 S1
-Z2 dC:/SHAMM/github repos/ELEX-7660/Lab4/ModelSim
-w1739266723
+Z3 dC:/SHAMM/github repos/ELEX-7660/Lab4/ModelSim
+w1739304691
 8C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv
-L0 1
-Z3 OV;L;10.5b;63
+L0 6
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1739266736.000000
+Z5 !s108 1739385265.000000
 !s107 C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface.sv|
 !i113 1
-Z5 o-work work -sv
-Z6 tCvgOpt 0
+Z6 o-work work -sv
+Z7 tCvgOpt 0
 vadcinterface_tb
 R0
-!s110 1739266737
+R1
 !i10b 1
 !s100 oKgL1OJnzE_jM<0>o4;CH0
 ITRCoAVkfzTnUM1Jj1d1<82
-R1
+R2
 !s105 adcinterface_tb_sv_unit
 S1
-R2
+R3
 w1739054566
 8C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv
 FC:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv
 L0 6
-R3
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Lab4/adcinterface_tb.sv|
 !i113 1
-R5
 R6
+R7

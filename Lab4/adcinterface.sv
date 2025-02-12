@@ -1,3 +1,8 @@
+// File: adcinterface.sv
+// Description:
+// Author: Marcus Fu
+// Date: 2024-02-9
+
 module adcinterface(
     input logic clk, reset_n, // clock (1.560mhz) and active-low reset
     input logic [2:0] chan, // ADC channel to sample
@@ -16,12 +21,12 @@ module adcinterface(
 
     // State Machine Signals
     logic [3:0] delay, next_delay;  // Delay counter
+    logic [2:0] shift_count;  // Shift counter for ADC_SDI
+    logic [2:0] shift_count_SDO;  // Shift counter for ADC_SDO
 
 
     // ADC Interface Signals
     logic [5:0] config_word;  // 6-bit Configuration word for ADC
-    logic [2:0] shift_count;  // Shift counter for ADC_SDI
-    logic [2:0] shift_count_SDO;  // Shift counter for ADC_SDO
     logic [11:0] temp_result;  // Temporary store result for ADC
     logic enable_sck;  // Gate clk signal
     
