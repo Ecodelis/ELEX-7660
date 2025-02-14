@@ -1,5 +1,5 @@
 // File: adcinterface.sv
-// Description:
+// Description: Interfaces with the ADC to sample the desired channel
 // Author: Marcus Fu
 // Date: 2024-02-9
 
