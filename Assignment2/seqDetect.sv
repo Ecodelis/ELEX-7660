@@ -10,15 +10,14 @@ module seqDetect #(parameter N=6)(
     input logic clk, reset_n
 );
 
-    typedef enum logic [1:0] {
+    typedef enum logic [0:0] {
         DETECT,     // Detects input 'a' for N clock cycles before testing input sequence
-        EQUAL,      // Determine if the input matched the given sequence and assert for 1 cycle
-        IDLE        // Reset values for next detection sequence
+        IDLE        // Wait for reset
     } states;
 
     states state; // State machine state
-    logic [2:0] wait_count; // Wait counter for delaying cycles 
     logic [N-1:0] seq_temp; // Temporary sequence storage
+    logic [2:0] wait_count; // Wait counter for delaying cycles 
 
     always_ff @(posedge clk or negedge reset_n) begin
         if (!reset_n) begin
@@ -35,23 +34,20 @@ module seqDetect #(parameter N=6)(
                         seq_temp <= { seq_temp[N-2:0], a }; // Shift in new value
                     end 
 
-                    if (wait_count == N) begin
-                        state <= EQUAL;
+                    if (wait_count == N-1) begin
+                        if ({ seq_temp[N-2:0], a } == seq) begin // See if sequence matches
+                            valid <= 1'b1;
+                        end else begin
+                            valid <= 1'b0;
+                        end
+                        state <= IDLE;
                     end
-                end
-
-                EQUAL: begin
-                    if (seq_temp == seq) begin
-                        valid <= 1'b1;
-                    end else begin
-                        valid <= 1'b0;
-                    end
-                    state <= IDLE;
                 end
 
                 IDLE: begin
                     valid <= 0;
                     wait_count <= 0;
+                    seq_temp <= 0; // Clear the sequence
                 end
 
                 default: 

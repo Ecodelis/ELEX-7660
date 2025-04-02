@@ -1,4 +1,5 @@
-// encoder_tb.sv - Testbench for the encoder module. Tests all possible inputs a
+// encoder_tb.sv - Testbench for the encoder module. 
+//                 Tests all possible inputs a
 // Author: Marcus Fu
 // Date: 2025-02-05
 

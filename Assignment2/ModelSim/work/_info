@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/SHAMM/github repos/ELEX-7660/Assignment2/ModelSim
 vseqDetect
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1739384998
+Z2 !s110 1740379649
 !i10b 1
-!s100 :7C_a?VaTQ^Bfa9bN?;N53
-I2E3S^<NJK8b43QRkm8^Aa1
+!s100 ?ee>>ZKgE9Az2S4E7K@Pf3
+IJ[RLG>hfkCL[e:RAi@NZ01
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 seqDetect_sv_unit
 S1
 R0
-w1739340039
+w1740379645
 8C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect.sv
 FC:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect.sv
 L0 6
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1739384998.000000
+Z5 !s108 1740379649.000000
 !s107 C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect.sv|
 !i113 1
@@ -37,13 +37,13 @@ vseqDetect_tb
 R1
 R2
 !i10b 1
-!s100 H`:M>m[Oj<iJjonHAO<W_2
-IdA;FRUaBW`jE4G6g<f2Q13
+!s100 Fb=S?`A?mEX9QS1k04A1n2
+InfzP?MEC^B9_Jh`NLW@QP3
 R3
 !s105 seqDetect_tb_sv_unit
 S1
 R0
-w1739383647
+w1740379223
 8C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect_tb.sv
 FC:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect_tb.sv
 L0 8
@@ -101,7 +101,7 @@ R4
 r1
 !s85 0
 31
-!s108 1739384997.000000
+R5
 !s107 C:/SHAMM/github repos/ELEX-7660/Assignment2/vendingMachine_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Assignment2/vendingMachine_tb.sv|
 !i113 1

@@ -12,7 +12,7 @@ module vendingMachine (
 
     typedef enum logic [1:0] {
         DETECT,     // Detects coins
-        DISPENSE,   // Determine if $1.00 has been achieved, raises valid for 1 cycle
+        DISPENSE,   // If $1.00 has been achieved, raises valid for 1 cycle
         RESET       // Reset values for next detection sequence
     } states;
 
@@ -32,7 +32,8 @@ module vendingMachine (
             state <= DETECT;
         end
         
-        else if (state == DETECT) begin // Detect coins and increment coin value
+        // Detect coins and increment coin value
+        else if (state == DETECT) begin 
 
             if (nickel) begin
                 coin <= coin + 5;
@@ -46,13 +47,10 @@ module vendingMachine (
                 coin <= coin + 25;
             end
 
-            if (coin == 100) begin // Dispense
+            if (coin >= 100) begin // Dispense
                 state <= RESET;
                 valid <= 1'b1;
             end
         end
     end
-
-
-
 endmodule

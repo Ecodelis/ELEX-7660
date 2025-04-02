@@ -1,0 +1,15 @@
+{C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake_tb.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fourPhaseHandshake_tb
+
+Top level modules:
+	fourPhaseHandshake_tb
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fourPhaseHandshake
+
+Top level modules:
+	fourPhaseHandshake
+
+} {} {}}

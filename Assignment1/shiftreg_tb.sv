@@ -1,4 +1,5 @@
-// shiftreg_tb.sv - Testbench for the encoder module. Tests all possible combinations of inputs
+// shiftreg_tb.sv - Testbench for the encoder module. 
+//                  Tests all possible combinations of inputs
 // Author: Marcus Fu
 // Date: 2025-02-05
 
@@ -32,11 +33,12 @@ module shiftreg_tb;
 
         s = 2'b00; // Load a into q
         @(negedge clk) ;
-        s= 2'b01; // shift right
+        s = 2'b01; // shift right w/ shiftIn = 0
         @(negedge clk) ;
-        s= 2'b11; // hold
+        s = 2'b11; // hold
         @(negedge clk) ;
-        s= 2'b10; // shift left
+        shiftIn = 1'b1;
+        s = 2'b10; // shift left w/ shiftIn = 1
         @(negedge clk) ;
 
         $stop ; // Stop simulation

@@ -1,0 +1,95 @@
+// File: fourPhaseHandshake.sv
+// Description: Transfers data from one clock domain to another using a four-phase handshake protocol.
+// Author: Marcus Fu
+// Date: 2024-04-01
+
+module fourPhaseHandshake #(parameter N=8)(
+    // dataIn, validIn, and ready are in clk1 domain
+    // validOut and dataOut are in clk2 domain
+
+    input logic clk1, clk2, reset_n, validIn,
+    input logic [N-1:0] dataIn,
+    output logic validOut, ready,
+    output logic [N-1:0] dataOut
+);
+
+    typedef enum logic [1:0] {
+        IDLE,       // Waiting for validIn to be asserted
+        TRANSFER,   // Transfer data from clk1 to clk2 domain
+        SYNC,       // Synchronize data from clk1 to clk2 domain
+        DONE        // validOut is asserted for one clock cycle
+    } state_data; 
+    
+    states_data state, next_state; // State machine state and next state
+    logic [N-1:0] dataReg;  // Temp storage in clk1 domain
+
+
+
+    // State register (synchronous to clk1)
+    always_ff @(posedge clk1 or negedge reset_n) begin
+        if (!reset_n)
+            state <= IDLE;
+        else
+            state <= next_state;
+    end
+
+     // Next-state logic (clk1 domain)
+    always_comb begin
+        next_state = state;
+        case (state)
+            IDLE: 
+                if (validIn) next_state = TRANSFER;
+
+            TRANSFER: // Capture data and wait for clk2 domain
+                next_state = SYNC;  
+
+            SYNC: // Synchronize data to clk2 domain
+                next_state = DONE;  
+
+            DONE: // Acknowledge transfer completion by asserting validOut
+                next_state = IDLE;
+        endcase
+    end
+
+
+    // clk1 domain
+    always_ff @(posedge clk1 or negedge reset_n) begin
+        if (!reset_n) begin
+            dataReg <= 0; // Reset and empty dataIn to 0
+            ready <= 1; // Assert signal indicating ready to receive data
+        end else begin
+            case (state)
+                IDLE: begin
+                    ready <= 1;  // Ready to accept data
+                    if (validIn) begin
+                        dataReg <= dataIn; // Store incoming data
+                        ready <= 0;  // Stop accepting new data
+                    end
+                end
+
+                TRANSFER: 
+                    ready <= 0;  // Data is being processed
+
+                DONE: 
+                    ready <= 1;  // Ready for next transaction
+            endcase
+        end
+
+    end
+
+
+
+    // Data transfer to clk2 domain
+    always_ff @(posedge clk2 or negedge reset_n) begin
+        if (!reset_n) begin
+            dataOut <= 0;
+            validOut <= 0;
+        end else if (state == SYNC) begin
+            dataOut <= dataReg;
+            validOut <= 1;  // Assert validOut for one clk2 cycle
+        end else begin
+            validOut <= 0;
+        end
+    end
+
+endmodule

@@ -1,0 +1,29 @@
+{C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module seqDetect
+
+Top level modules:
+	seqDetect
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect_tb.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment2/seqDetect_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module seqDetect_tb
+
+Top level modules:
+	seqDetect_tb
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Assignment2/vendingMachine.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment2/vendingMachine.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vendingMachine
+
+Top level modules:
+	vendingMachine
+
+} {} {}} {C:/SHAMM/github repos/ELEX-7660/Assignment2/vendingMachine_tb.sv} {1 {vlog -work work -sv -stats=none {C:/SHAMM/github repos/ELEX-7660/Assignment2/vendingMachine_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vendingMachine_tb
+
+Top level modules:
+	vendingMachine_tb
+
+} {} {}}

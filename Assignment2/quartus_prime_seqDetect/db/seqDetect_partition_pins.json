@@ -8,11 +8,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "seq[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seq[5]",
+					"name" : "a",
 					"strict" : false
 				},
 				{
@@ -32,15 +28,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "seq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seq[5]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "reset_n",
-					"strict" : false
-				},
-				{
-					"name" : "a",
 					"strict" : false
 				}
 			]
