@@ -53,31 +53,8 @@ module fourPhaseHandshake_tb;
         wait(ready == 1);
         #10 validIn = 0;
         
-        // // Test Case 2: Back-to-Back Transfer (data = 0x55)
-        // // After some delay, send new data.
-        // #30;
-        // dataIn = 8'h55;
-        // validIn = 1;
-        // wait(ready == 1);
-        // #10 validIn = 0;
-        
-        // // Test Case 3: Assert validIn while module is not ready.
-        // // The DUT should ignore this transfer.
-        // #20;
-        // dataIn = 8'hFF;
-        // validIn = 1;
-        // // Hold validIn briefly; if ready is low, it should be ignored.
-        // #5 validIn = 0;
-        
-        // // Test Case 4: Transfer after delay (data = 0x0F)
-        // // This ensures the module recovers and is ready again.
-        // #40;
-        // dataIn = 8'h0F;
-        // validIn = 1;
-        // wait(ready == 1);
-        // #10 validIn = 0;
-        
-        #100;
+
+        #1000;
         $stop;
     end
 endmodule
