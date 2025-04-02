@@ -52,9 +52,40 @@ module fourPhaseHandshake_tb;
         // Wait for ready to be high to ensure the DUT can accept the data
         wait(ready == 1);
         #10 validIn = 0;
+        // Wait for the transfer to complete
+        wait(ready == 0);
+        wait(ready == 1);
         
 
-        #1000;
+        // Test Case 2: Assert validIn while module is not ready (data = 0xBB)
+        // Apply 3 validIn pulses while read is low. This should not do anything
+        #15;
+        dataIn = 8'hBB;
+        validIn = 1;
+        // Wait for ready to be high to ensure the DUT can accept the data
+        wait(ready == 1);
+        repeat(5) #8 validIn = ~validIn;
+        validIn = 0;
+        // Wait for the transfer to complete
+        wait(ready == 0);
+        wait(ready == 1);
+
+
+        // Test Case 3: Normal Transfer after test case 2 (data = 0xF4)
+        // Wait for a short period, then apply validIn while ready is high.
+        #15;
+        dataIn = 8'hF4;
+        validIn = 1;
+        // Wait for ready to be high to ensure the DUT can accept the data
+        wait(ready == 1);
+        #10 validIn = 0;
+        // Wait for the transfer to complete
+        wait(ready == 0);
+        wait(ready == 1);
+
+        
+
+        #100;
         $stop;
     end
 endmodule
