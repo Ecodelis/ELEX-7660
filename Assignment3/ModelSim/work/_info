@@ -10,23 +10,23 @@ cModel Technology
 dC:/SHAMM/github repos/ELEX-7660/Assignment2/ModelSim
 vfourPhaseHandshake
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1743559971
+!s110 1743562186
 !i10b 1
-!s100 [lOoZ8;1;=A;E0nc`^ZLY1
-IJVM018mXl7>9EGi?2?9;82
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 PFM`UzE<<U1Fl_VN2Bofc3
+Ie4=VFL2XzmJ?9fkj6@XR[1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 !s105 fourPhaseHandshake_sv_unit
 S1
-Z3 dC:/SHAMM/github repos/ELEX-7660/Assignment3/ModelSim
-w1743559199
+Z2 dC:/SHAMM/github repos/ELEX-7660/Assignment3/ModelSim
+w1743562181
 8C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake.sv
 FC:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake.sv
 L0 7
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1743559971.000000
+Z4 !s108 1743562185.000000
 !s107 C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake.sv|
 !i113 1
@@ -35,23 +35,23 @@ Z6 tCvgOpt 0
 nfour@phase@handshake
 vfourPhaseHandshake_tb
 R0
-R1
+!s110 1743562185
 !i10b 1
-!s100 KM9Z=LgE<Hn`Ha5ShY2e60
-IE[86MO<66hFR7]N[HB@T21
-R2
+!s100 @7TAZTDY1h:Y<NcADL=k82
+IBiC1]cIHmLl1>2ME]bi100
+R1
 !s105 fourPhaseHandshake_tb_sv_unit
 S1
-R3
-w1743559335
+R2
+w1743561219
 8C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake_tb.sv
 FC:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake_tb.sv
-L0 7
-R4
+L0 9
+R3
 r1
 !s85 0
 31
-!s108 1743559970.000000
+R4
 !s107 C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/SHAMM/github repos/ELEX-7660/Assignment3/fourPhaseHandshake_tb.sv|
 !i113 1

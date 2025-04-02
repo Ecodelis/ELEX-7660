@@ -4,35 +4,27 @@
 // Author: Marcus Fu
 // Date: 2024-04-01
 
-module fourPhaseHandshake #(parameter N = 8)(
-    // clk1 domain signals
-    input  logic clk1, reset_n,       // reset_n is active low
-    input  logic [N-1:0] dataIn,
-    input  logic validIn,
-    output logic ready,               // Indicates the module is ready to accept data
-
-    // clk2 domain signals
-    input  logic clk2,
-    output logic [N-1:0] dataOut,
-    output logic validOut             // Asserted for one clk2 cycle when new data is available
+module fourPhaseHandshake #(parameter N=8)(
+    input logic clk1, clk2, reset_n, validIn,
+    input logic [N-1:0] dataIn,
+    output logic validOut, ready,
+    output logic [N-1:0] dataOut
 );
 
     typedef enum logic [1:0] {
-        IDLE,       // Waiting for validIn to be asserted and ready to accept new data.
-        TRANSFER,   // Data is captured and req is asserted.
-        WAIT_ACK    // Waiting for ack from the clk2 domain.
-    } state_t;
+        IDLE,       // Waiting for validIn to be asserted
+        TRANSFER,   // Transfer data from clk1 to clk2 domain
+        DONE        // De-assert req/ack and return to IDLE at the end
+    } state_data; 
+    
+    state_data state, next_state; // State machine state and next state
+    logic [N-1:0] dataReg;  // Temp storage in clk1 domain
 
-    state_t state, next_state; 
-    logic [N-1:0] dataReg; // Register to hold the data being transferred.
+    // Handshake signals (req and ack)
+    logic req, req_sync1, req_sync2;  // req signal with double flip-flop synchronizers
+    logic ack, ack_sync1, ack_sync2;  // ack signal with double flip-flop synchronizers
 
-    // Handshake signals (generated in each domain)
-    logic req;         // req: Generated in clk1 to request data transfer.
-    logic req_sync;    // req_sync: Synchronized version of req in the clk2 domain.
-    logic ack;         // ack: Generated in clk2 to acknowledge data reception.
-    logic ack_sync;    // ack_sync: Synchronized version of ack in the clk1 domain.
-
-    // State register (clk1 domain)
+    // State register (synchronous to clk1)
     always_ff @(posedge clk1 or negedge reset_n) begin
         if (!reset_n)
             state <= IDLE;
@@ -40,85 +32,67 @@ module fourPhaseHandshake #(parameter N = 8)(
             state <= next_state;
     end
 
-    // Next-state logic (clk1 domain)
+    // Next-state logic [Conditions needed to switch to next state] (clk1 domain)
     always_comb begin
         next_state = state;
         case (state)
-            IDLE: begin
-                // If validIn is high and the module is ready, capture data and generate req.
-                if (validIn && ready)
-                    next_state = TRANSFER;
-            end
-            TRANSFER: begin
-                // After asserting req, move to waiting for ack.
-                next_state = WAIT_ACK;
-            end
-            WAIT_ACK: begin
-                // Once the ack is received (synchronized from clk2), return to IDLE.
-                if (ack_sync)
-                    next_state = IDLE;
-            end
-            default: next_state = IDLE;
+            IDLE: 
+                if (validIn && !req) next_state = TRANSFER;  
+            TRANSFER: 
+                if (ack_sync2) next_state = DONE;
+            DONE: 
+                if (!ack_sync2) next_state = IDLE;  // Return to IDLE when ack is de-asserted
         endcase
     end
 
-    // Data capture, ready signal, and req generation in clk1 domain.
+    // CLK1 Domain Logic
     always_ff @(posedge clk1 or negedge reset_n) begin
         if (!reset_n) begin
-            dataReg <= '0;
-            ready   <= 1;  // Initially ready to accept data.
-            req     <= 0;
+            dataReg <= 0;
+            ready <= 1;  // Ready to accept data when reset is active
+            req <= 0;    // No request by default
         end else begin
             case (state)
                 IDLE: begin
-                    ready <= 1;
+                    ready <= 1;  // Ready to accept data
                     if (validIn && ready) begin
-                        dataReg <= dataIn; // Capture incoming data.
-                        req <= 1;          // Generate a one-cycle req pulse.
-                        ready <= 0;        // Not ready for new data until transfer completes.
+                        dataReg <= dataIn;  // Store incoming data
+                        req <= 1;  // Assert req to request data transfer
+                        ready <= 0;  // Stop accepting new data once data is captured
                     end
                 end
                 TRANSFER: begin
-                    // Deassert req after one cycle.
-                    req <= 0;
-                    ready <= 0;
+                    ready <= 0;  // Ready is de-asserted during transfer
                 end
-                WAIT_ACK: begin
-                    // Maintain ready low until ack is received.
-                    ready <= 0;
-                end
-                default: begin
-                    req <= 0;
-                    ready <= 1;
+                DONE: begin
+                    req <= 0;  // Deassert req
                 end
             endcase
         end
     end
 
-    // Synchronize req from clk1 domain to clk2 domain (Double Flop)
-    logic req_ff1;
+    // (Double Flop): Synchronize req from clk1 domain to clk2 domain 
     always_ff @(posedge clk2 or negedge reset_n) begin
         if (!reset_n) begin
-            req_ff1  <= 0;
-            req_sync <= 0;
+            req_sync1 <= 0;
+            req_sync2 <= 0;
         end else begin
-            req_ff1  <= req;
-            req_sync <= req_ff1;
+            req_sync1 <= req;     // First flip-flop to synchronize the req signal
+            req_sync2 <= req_sync1; // Second flip-flop to avoid metastability
         end
     end
 
-    // clk2 Domain: Data Transfer and ack Generation
+    // CLK2 Domain Logic
     always_ff @(posedge clk2 or negedge reset_n) begin
         if (!reset_n) begin
-            dataOut  <= '0;
+            dataOut  <= 0;
             validOut <= 0;
-            ack      <= 0;
+            ack      <= 0;  // De-assert ack by default
         end else begin
-            if (req_sync) begin
-                // When a synchronized req is detected, capture the data.
-                dataOut  <= dataReg; // dataReg is assumed to be stable due to handshake.
-                validOut <= 1;       // Assert validOut for one clk2 cycle.
-                ack      <= 1;       // Generate an ack pulse.
+            if (req_sync2) begin  // When synchronized req is detected
+                dataOut  <= dataReg; // Transfer data to clk2 domain
+                validOut <= 1;       // Assert validOut for one clk2 cycle
+                ack      <= 1;       // Generate ack pulse to acknowledge data receipt
             end else begin
                 validOut <= 0;
                 ack <= 0;
@@ -126,15 +100,14 @@ module fourPhaseHandshake #(parameter N = 8)(
         end
     end
 
-    // Synchronize ack from clk2 domain back to clk1 domain (Double Flop)
-    logic ack_ff1;
+    // (Double Flop): Synchronize ack from clk2 domain back to clk1 domain
     always_ff @(posedge clk1 or negedge reset_n) begin
         if (!reset_n) begin
-            ack_ff1  <= 0;
-            ack_sync <= 0;
+            ack_sync1 <= 0;
+            ack_sync2 <= 0;
         end else begin
-            ack_ff1  <= ack;
-            ack_sync <= ack_ff1;
+            ack_sync1 <= ack;     // First flip-flop to synchronize the ack signal
+            ack_sync2 <= ack_sync1; // Second flip-flop to avoid metastability
         end
     end
 
