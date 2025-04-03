@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Wed Apr 02 14:10:41 2025
+Analysis & Synthesis Status : Successful - Thu Apr 03 12:15:35 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : assignment3
 Top-level Entity Name : fourPhaseHandshake
 Family : MAX V
-Total logic elements : 29
+Total logic elements : 30
 Total pins : 22
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

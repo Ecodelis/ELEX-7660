@@ -1,5 +1,5 @@
 Flow report for assignment3
-Wed Apr 02 14:10:41 2025
+Thu Apr 03 12:15:35 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,12 +40,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Apr 02 14:10:41 2025       ;
+; Flow Status           ; Successful - Thu Apr 03 12:15:35 2025       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; assignment3                                 ;
 ; Top-level Entity Name ; fourPhaseHandshake                          ;
 ; Family                ; MAX V                                       ;
-; Total logic elements  ; 29                                          ;
+; Total logic elements  ; 30                                          ;
 ; Total pins            ; 22                                          ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2025 14:10:23 ;
+; Start date & time ; 04/03/2025 12:15:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; assignment3         ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +--------------------------+--------------------------------+---------------+-------------+------------+
 ; Assignment Name          ; Value                          ; Default Value ; Entity Name ; Section Id ;
 +--------------------------+--------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID    ; 18301349928591.174362822222180 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID    ; 18301349928591.174370771430488 ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY ; output_files                   ; --            ; --          ; --         ;
 ; TOP_LEVEL_ENTITY         ; fourPhaseHandshake             ; assignment3   ; --          ; --         ;
 +--------------------------+--------------------------------+---------------+-------------+------------+
@@ -79,8 +79,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4712 MB             ; 00:00:38                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4707 MB             ; 00:00:42                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -58,15 +58,18 @@ module fourPhaseHandshake #(parameter N=8)(
                 IDLE: begin
                     ready <= 1;  // Ready to accept data
                     if (validIn && ready) begin
-                        dataReg <= dataIn;  // Store incoming data
+                        dataReg <= dataIn;  // Capture data
+                        req <= 1;           // Immediately assert req
+                        ready <= 0;         // Not ready anymore
                     end
                 end
                 TRANSFER: begin
-                    req <= 1;  // Assert req to request data transfer
-                    ready <= 0;  // Ready is de-asserted during transfer
+                    if (ack_sync2) begin
+                        req <= 0;   // Deassert req
+                    end
                 end
                 DONE: begin
-                    req <= 0;  // Deassert req
+                    ready <= 1;  // Ready to accept data
                 end
             endcase
         end
