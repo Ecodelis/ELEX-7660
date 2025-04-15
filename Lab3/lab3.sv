@@ -33,8 +33,8 @@ module lab3 ( input logic CLOCK_50,       // 50 MHz clock
 
    enc2freq enc2freq_2 (.clk(CLOCK_50), .cw(enc2_cw), .ccw(enc2_ccw), .freq(tone_freq), .reset_n(reset_n));
 
-   // reset and onOff signals
-   always_ff @(posedge CLOCK_50) begin
+	// reset and onOff signals
+   	always_ff @(posedge CLOCK_50) begin
 		clk_div_count <= clk_div_count + 1'b1 ;
 	  
     // Pushbuttons are active low

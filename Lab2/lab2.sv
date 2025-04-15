@@ -51,8 +51,6 @@ module lab2 ( input logic CLOCK_50,       // 50 MHz clock
       2'b11: disp_digit = enc1_count[7:4]; // right tens
       2'b10: disp_digit = enc1_count[3:0]; // right ones
     endcase
-
-  
   end  
 
 endmodule
